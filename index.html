@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central de Conhecimento — Suporte SGN</title>
+  <meta name="description" content="Central de Conhecimento do Suporte SGN" />
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <style>
+    :root {
+      --brand: #0b57d0;
+      --brand-dark: #072d6b;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg-soft: #f8fafc;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--border);
+      background: linear-gradient(180deg, #08285f 0%, #09245a 100%);
+    }
+
+    .sidebar ul li a,
+    .sidebar-nav a,
+    .app-name-link,
+    .sidebar-toggle span {
+      color: #ffffff !important;
+    }
+
+    .app-name {
+      padding-top: 10px;
+      font-weight: 700;
+      letter-spacing: .2px;
+    }
+
+    .app-name::after {
+      content: "Suporte SGN · v1.0";
+      display: block;
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,.75);
+      margin-top: 6px;
+    }
+
+    .search {
+      margin: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(11,87,208,.9);
+    }
+
+    .search input {
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.1);
+      color: #fff;
+      padding: 10px 12px;
+    }
+
+    .search input::placeholder {
+      color: rgba(255,255,255,.7);
+    }
+
+    .content {
+      padding-top: 12px;
+    }
+
+    .markdown-section {
+      max-width: 980px;
+      padding: 36px 42px 60px;
+    }
+
+    .markdown-section h1 {
+      font-size: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 10px;
+      margin-bottom: 18px;
+      color: #111827;
+    }
+
+    .markdown-section h2 {
+      border-left: 4px solid var(--brand);
+      padding-left: 10px;
+      margin-top: 28px;
+    }
+
+    .markdown-section blockquote {
+      border-left: 4px solid var(--brand);
+      background: #f4f8ff;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: #243b53;
+    }
+
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin: 18px 0;
+    }
+
+    .markdown-section th {
+      background: var(--bg-soft);
+    }
+
+    .markdown-section code:not([class*=lang-]) {
+      background: #eef2ff;
+      color: #1e3a8a;
+      padding: 2px 6px;
+      border-radius: 6px;
+    }
+
+    .footer-note {
+      margin: 28px 42px 18px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .markdown-section {
+        padding: 24px 18px 40px;
+      }
+      .footer-note {
+        margin: 20px 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Carregando a Central de Conhecimento...</div>
+
+  <script>
+    window.$docsify = {
+      name: 'Central de Conhecimento',
+      homepage: 'home.md',
+      loadSidebar: '_sidebar.md',
+      subMaxLevel: 2,
+      search: {
+        placeholder: 'Buscar erro, sistema ou sintoma',
+        noData: 'Nenhum resultado encontrado',
+        depth: 3
+      }
+    };
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      const footer = document.createElement('div');
+      footer.className = 'footer-note';
+      footer.innerText = 'Central de Conhecimento — Suporte SGN · Base inicial para apresentação e evolução contínua da equipe.';
+      document.body.appendChild(footer);
+    });
+  </script>
+</body>
+</html>
