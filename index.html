@@ -6,6 +6,7 @@
   <title>Central de Conhecimento — Suporte SGN</title>
   <meta name="description" content="Central de Conhecimento do Suporte SGN" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+
   <style>
     :root {
       --brand: #0b57d0;
@@ -14,28 +15,31 @@
       --muted: #6b7280;
       --border: #e5e7eb;
       --bg-soft: #f8fafc;
+      --sidebar-bg: #082c6c;
+      --sidebar-bg-2: #07275f;
     }
 
     body {
       font-family: Inter, Arial, sans-serif;
+      color: var(--text);
     }
 
     .sidebar {
       border-right: 1px solid var(--border);
-      background: linear-gradient(180deg, #08285f 0%, #09245a 100%);
-    }
-
-    .sidebar ul li a,
-    .sidebar-nav a,
-    .app-name-link,
-    .sidebar-toggle span {
-      color: #ffffff !important;
+      background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
     }
 
     .app-name {
       padding-top: 10px;
       font-weight: 700;
-      letter-spacing: .2px;
+      letter-spacing: 0.2px;
+      color: #ffffff;
+    }
+
+    .app-name-link,
+    .app-name-link:hover {
+      color: #ffffff !important;
+      text-decoration: none;
     }
 
     .app-name::after {
@@ -43,26 +47,67 @@
       display: block;
       font-size: 12px;
       font-weight: 500;
-      color: rgba(255,255,255,.75);
+      color: rgba(255, 255, 255, 0.78);
       margin-top: 6px;
     }
 
     .search {
       margin: 16px;
       padding-bottom: 8px;
-      border-bottom: 2px solid rgba(11,87,208,.9);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.22);
     }
 
     .search input {
       border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.1);
-      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.1);
+      color: #ffffff;
       padding: 10px 12px;
     }
 
     .search input::placeholder {
-      color: rgba(255,255,255,.7);
+      color: rgba(255, 255, 255, 0.72);
+    }
+
+    .sidebar ul li a,
+    .sidebar-nav a {
+      color: #ffffff !important;
+    }
+
+    .sidebar-nav a:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 6px;
+    }
+
+    .sidebar-nav li.active > a {
+      background: rgba(255, 255, 255, 0.14);
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .sidebar-nav > ul > li > p {
+      color: #ffffff !important;
+      font-weight: 600;
+      opacity: 0.95;
+      margin: 0;
+      padding: 6px 0;
+    }
+
+    .sidebar-toggle {
+      top: 10px !important;
+      bottom: auto !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-radius: 8px !important;
+      width: 42px;
+      height: 42px;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    .sidebar-toggle span {
+      background-color: #0b57d0 !important;
     }
 
     .content {
@@ -70,11 +115,12 @@
     }
 
     .markdown-section {
-      max-width: 980px;
+      max-width: 900px;
       padding: 36px 42px 60px;
     }
 
     .markdown-section h1 {
+      text-align: left;
       font-size: 2rem;
       border-bottom: 1px solid var(--border);
       padding-bottom: 10px;
@@ -86,6 +132,7 @@
       border-left: 4px solid var(--brand);
       padding-left: 10px;
       margin-top: 28px;
+      color: #24476d;
     }
 
     .markdown-section blockquote {
@@ -101,6 +148,13 @@
       width: 100%;
       border-collapse: collapse;
       margin: 18px 0;
+    }
+
+    .markdown-section th,
+    .markdown-section td {
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      text-align: left;
     }
 
     .markdown-section th {
@@ -126,6 +180,7 @@
       .markdown-section {
         padding: 24px 18px 40px;
       }
+
       .footer-note {
         margin: 20px 18px;
       }
@@ -151,12 +206,16 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
   <script>
     window.addEventListener('load', function () {
-      const footer = document.createElement('div');
-      footer.className = 'footer-note';
-      footer.innerText = 'Central de Conhecimento — Suporte SGN · Base inicial para apresentação e evolução contínua da equipe.';
-      document.body.appendChild(footer);
+      const oldFooter = document.querySelector('.footer-note');
+      if (!oldFooter) {
+        const footer = document.createElement('div');
+        footer.className = 'footer-note';
+        footer.innerText = 'Central de Conhecimento — Suporte SGN · Base inicial para apresentação e evolução contínua da equipe.';
+        document.body.appendChild(footer);
+      }
     });
   </script>
 </body>
