@@ -1,6 +1,6 @@
 # Integrações
 
-> 📌 Esta seção concentra erros, causas e tratativas relacionados a APIs, serviços, sincronizações e fluxos de integração.
+>  Esta seção concentra erros, causas e tratativas relacionados a Integrações, reprocessamentos, sincronizações e fluxos de integração.
 
 ---
 
