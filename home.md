@@ -22,7 +22,7 @@ Ao consultar esta central, a pessoa do suporte deve conseguir responder rapidame
 1. **Que erro ou sintoma estou vendo?**
 2. **O que preciso validar antes de agir?**
 3. **Esse caso eu resolvo no suporte ou preciso escalar?**
-4. **Se precisar escalar, vai para AGECOM, GTIC ou devs?**
+4. **Se precisar escalar, vai para GECON, GETIC ou devs?**
 5. **Quais evidências devo enviar no escalonamento?**
 
 ---
@@ -46,7 +46,7 @@ Ao consultar esta central, a pessoa do suporte deve conseguir responder rapidame
 | [Tratativa de Chamados no SGN](fluxo-tratativa.md) | Fluxo inicial do suporte antes de escalar |
 | [Integrações](integracoes.md) | Erros técnicos, APIs, sincronizações e mensagens de integração |
 | [Benner](benner.md) | Casos ligados ao ERP, faturamento, documentos e cadastros |
-| [Direcionamento e Escalonamento](direcionamento.md) | Como decidir entre AGECOM, GTIC e devs |
+| [Direcionamento e Escalonamento](direcionamento.md) | Como decidir entre GECON, GETIC e devs |
 | [Painel de Monitoramento](dashboard.md) | Visão de volume e acompanhamento de erros |
 | [Modelo de Novo Caso](modelo-de-registro.md) | Padrão para alimentar a base |
 | [Como Alimentar a Base](contribuicao.md) | Regras de manutenção da central |
