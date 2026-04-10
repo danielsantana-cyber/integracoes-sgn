@@ -1,63 +1,55 @@
-# Dashboard
+# Painel de Monitoramento
 
-> 📌 Esta seção foi reservada para documentar dúvidas, erros recorrentes, validações e orientações ligadas ao uso do Dashboard.
-
----
-
-## Objetivo da seção
-
-O Dashboard tende a concentrar consultas, conferências e leitura de dados.
-
-Por isso, esta página foi estruturada para receber conteúdos como:
-
-- erros de visualização
-- dúvidas sobre leitura de informações
-- ausência de dados ou divergência de indicadores
-- filtros que impactam a análise
-- orientações operacionais para consulta
+> 📌 Esta seção não representa uma frente principal de tratativa. Ela existe para apoiar o suporte na visualização de volume e concentração de erros.
 
 ---
 
-## Como esta página deve evoluir
+## O que é este painel
 
-Sempre que a equipe identificar um caso recorrente relacionado ao Dashboard, o ideal é registrar:
+O painel é usado como apoio operacional para indicar:
 
-1. o cenário em que o problema aparece
-2. o impacto no atendimento
-3. a causa conhecida, quando houver
-4. a orientação validada pela equipe
-5. o fluxo de escalonamento, se necessário
+- onde há maior volume de erro
+- quais tipos de incidente estão aparecendo com mais frequência
+- onde vale aprofundar análise
 
----
-
-## Padrão futuro dos registros
-
-Todo conteúdo novo nesta seção deve seguir o mesmo padrão da central:
-
-- Contexto
-- Causa
-- Solução
-- Atenção
-- Escalonamento
-
-Use a página [Modelo de Novo Caso](modelo-de-registro.md) como referência.
+Ele **não é o foco principal da central** e não substitui a tratativa operacional dos casos.
 
 ---
 
-## Exemplos de temas que podem entrar aqui
+## Como o suporte deve usar esta página
 
-- dado não aparece no painel
-- filtro altera resultado esperado
-- divergência entre Dashboard e outro sistema
-- dúvida sobre o que cada indicador representa
-- perfil sem acesso ao painel necessário
+O painel pode ajudar a:
 
----
-
-## Status atual
-
-Esta seção já está pronta estruturalmente e pode receber os primeiros casos assim que forem validados pela equipe.
+- perceber aumento de incidentes
+- identificar concentração de falhas
+- cruzar o volume de erro com chamados recebidos
+- apoiar a decisão de investigar Integrações, SGN ou Benner
 
 ---
 
-*Status: seção preparada para expansão com conteúdo real da operação.*
+## O que não esperar desta seção
+
+Esta página não foi criada para detalhar bugs ou resolver incidentes sozinha.
+
+Ela serve mais como:
+
+- visão de apoio
+- indicação de volume
+- ponto de observação
+
+A tratativa em si continua concentrada em:
+
+- [Tratativa de Chamados no SGN](fluxo-tratativa.md)
+- [Integrações](integracoes.md)
+- [Benner](benner.md)
+- [Direcionamento e Escalonamento](direcionamento.md)
+
+---
+
+## Evolução futura
+
+Se a equipe começar a usar o painel como apoio mais frequente, esta seção pode receber orientações mais específicas de leitura e interpretação.
+
+---
+
+*Seção reposicionada como apoio de monitoramento, não como frente principal da operação.*
