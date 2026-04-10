@@ -85,18 +85,34 @@
       font-weight: 600;
     }
 
-    .sidebar-nav > ul > li > p {
+    /* força os títulos de seção do menu lateral a ficarem visíveis */
+    .sidebar-nav > ul > li > p,
+    .sidebar-nav > ul > li > strong,
+    .sidebar-nav > ul > li > em,
+    .sidebar-nav > ul > li > span,
+    .sidebar-nav li p,
+    .sidebar-nav li strong {
       color: #ffffff !important;
-      font-weight: 600;
-      opacity: 0.95;
+      font-weight: 700 !important;
+      opacity: 1 !important;
       margin: 0;
       padding: 6px 0;
+      display: block;
+    }
+
+    .sidebar-nav ul {
+      margin: 0;
+      padding-left: 0;
+    }
+
+    .sidebar-nav li {
+      margin: 0;
     }
 
     .sidebar-toggle {
       top: 10px !important;
       bottom: auto !important;
-      background: rgba(255, 255, 255, 0.9) !important;
+      background: rgba(255, 255, 255, 0.92) !important;
       border-radius: 8px !important;
       width: 42px;
       height: 42px;
@@ -168,21 +184,14 @@
       border-radius: 6px;
     }
 
+    /* remove qualquer footer antigo que tenha sido injetado */
     .footer-note {
-      margin: 28px 42px 18px;
-      font-size: 12px;
-      color: var(--muted);
-      border-top: 1px solid var(--border);
-      padding-top: 10px;
+      display: none !important;
     }
 
     @media (max-width: 768px) {
       .markdown-section {
         padding: 24px 18px 40px;
-      }
-
-      .footer-note {
-        margin: 20px 18px;
       }
     }
   </style>
@@ -206,17 +215,5 @@
 
   <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-
-  <script>
-    window.addEventListener('load', function () {
-      const oldFooter = document.querySelector('.footer-note');
-      if (!oldFooter) {
-        const footer = document.createElement('div');
-        footer.className = 'footer-note';
-        footer.innerText = 'Central de Conhecimento — Suporte SGN · Base inicial para apresentação e evolução contínua da equipe.';
-        document.body.appendChild(footer);
-      }
-    });
-  </script>
 </body>
 </html>
