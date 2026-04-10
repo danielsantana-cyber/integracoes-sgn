@@ -29,8 +29,8 @@
 
 * **🎯 Direcionamento e Escalonamento**
   * [Visão Geral](direcionamento.md)
-  * [Quando vai para GECON](direcionamento.md#quando-direcionar-para-agecom)
-  * [Quando vai para GETIC](direcionamento.md#quando-direcionar-para-gtic)
+  * [Quando vai para GECON](direcionamento.md#quando-direcionar-para-gecon)
+  * [Quando vai para GETIC](direcionamento.md#quando-direcionar-para-getic)
   * [Quando vai para devs](direcionamento.md#quando-direcionar-para-devs)
 
 ---
