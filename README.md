@@ -6,7 +6,6 @@ Base de conhecimento estruturada para a equipe de suporte, organizada para consu
 
 ## O que este projeto entrega
 
-- Site estático pronto para GitHub Pages
 - Busca rápida por erros, sintomas e sistemas
 - Categorias organizadas por contexto operacional
 - Página de onboarding com acessos e primeiros passos
@@ -33,19 +32,6 @@ integracoes-sgn/
 └── problemas.md
 ```
 
----
-
-## Como publicar no GitHub Pages
-
-1. Crie um repositório no GitHub
-2. Envie todos os arquivos desta pasta para a raiz do repositório
-3. Vá em **Settings > Pages**
-4. Em **Build and deployment**, selecione **Deploy from a branch**
-5. Escolha a branch `main` e a pasta `/ (root)`
-6. Salve e aguarde a geração do link
-
----
-
 ## Como a equipe pode usar
 
 1. Acessar a central pelo link do GitHub Pages
@@ -56,15 +42,5 @@ integracoes-sgn/
 
 ---
 
-## Observação importante
-
-Antes de publicar no ambiente oficial da empresa, revise:
-
-- responsáveis por liberação de acesso
-- canais formais de escalonamento
-- links oficiais dos sistemas
-- informações que ainda estejam em análise
-
----
 
 *Versão 1.0 · Pacote corrigido para GitHub Pages na raiz do repositório*
