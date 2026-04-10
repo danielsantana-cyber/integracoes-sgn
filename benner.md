@@ -1,6 +1,6 @@
 # Benner
 
-> 📌 Esta seção reúne erros, causas e tratativas ligados ao ERP Benner, especialmente em cenários de cadastro, faturamento, documentos e rotinas financeiras.
+>  Esta seção reúne erros, causas e tratativas ligados ao Benner, especialmente em cenários de cadastro, faturamento e rotinas financeiras.
 
 ---
 
@@ -12,7 +12,7 @@ Centralizar tratativas do Benner em um padrão único, facilitando consulta ráp
 
 ## Como esta página deve ser usada
 
-- Consultar falhas ligadas ao ERP
+- Consultar falhas ligadas ao Benner
 - Identificar causas já mapeadas
 - Reutilizar tratativas validadas
 - Registrar novos casos relevantes da operação
@@ -33,6 +33,5 @@ Cada caso deve conter:
 
 ## Status atual
 
-Esta página está pronta para consolidação e expansão com casos reais da operação.
 
 > Use [Modelo de Novo Caso](modelo-de-registro.md) para registrar novos itens.
