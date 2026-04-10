@@ -1,6 +1,6 @@
 # Modelo de Novo Caso
 
-> 📌 Use este modelo sempre que a equipe precisar registrar um novo erro, processo ou tratativa na Central de Conhecimento.
+>  Use este modelo sempre que a equipe precisar registrar um novo erro, processo ou tratativa na Central de Conhecimento.
 
 ---
 
@@ -9,23 +9,23 @@
 ```markdown
 ## Título do caso
 
-**📌 Contexto**  
+** Contexto**  
 Descreva em que cenário o erro acontece.
 
-**🧠 Causa**  
+** Causa**  
 Explique a causa identificada.  
 Se ainda não estiver validada, escreva:  
 "Causa em análise — padrão ainda não confirmado."
 
-**✅ Solução passo a passo**  
+** Solução passo a passo**  
 1. Primeiro passo  
 2. Segundo passo  
 3. Terceiro passo
 
-**⚠️ Atenção**  
+** Atenção**  
 Inclua alertas, limitações ou erros comuns.
 
-**👨‍💻 Escalonamento**  
+** Escalonamento**  
 Indique quando escalar e para qual área ou fluxo interno.
 ```
 
@@ -35,21 +35,21 @@ Indique quando escalar e para qual área ou fluxo interno.
 
 ## Erro ao consultar informação no sistema X
 
-**📌 Contexto**  
+** Contexto**  
 Ocorre quando o colaborador tenta consultar dados após receber o primeiro acesso.
 
-**🧠 Causa**  
+** Causa**  
 Perfil liberado sem a permissão necessária para a tela.
 
-**✅ Solução passo a passo**  
+** Solução passo a passo**  
 1. Validar se o login está funcionando  
 2. Conferir se a tela aparece no menu  
 3. Confirmar com a equipe responsável se o perfil está correto
 
-**⚠️ Atenção**  
+** Atenção**  
 Nem todo erro de acesso significa falha no sistema. Muitas vezes é apenas perfil incompleto.
 
-**👨‍💻 Escalonamento**  
+** Escalonamento**  
 Se o perfil correto já tiver sido solicitado e o problema continuar, seguir o fluxo interno definido pela equipe.
 
 ---
