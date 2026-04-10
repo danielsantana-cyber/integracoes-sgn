@@ -1,6 +1,6 @@
 # Direcionamento e Escalonamento
 
-> 📌 Esta página ajuda o suporte a decidir para qual equipe um caso deve ser direcionado quando não puder ser resolvido no atendimento inicial.
+>Esta página ajuda o suporte a decidir para qual equipe um caso deve ser direcionado quando não puder ser resolvido no atendimento inicial.
 
 ---
 
@@ -10,8 +10,8 @@ Evitar escalonamento incorreto e reduzir retrabalho.
 
 O foco aqui é responder:
 - quando o caso ainda é do suporte
-- quando deve ir para AGECOM
-- quando deve ir para GTIC
+- quando deve ir para GECON
+- quando deve ir para GETIC
 - quando deve ir para devs
 
 ---
@@ -28,7 +28,7 @@ Antes de escalar, o suporte deve sempre validar:
 
 ---
 
-## Quando direcionar para AGECOM
+## Quando direcionar para GECON
 
 Use este direcionamento quando o caso envolver principalmente:
 
@@ -42,7 +42,7 @@ Use este direcionamento quando o caso envolver principalmente:
 
 ---
 
-## Quando direcionar para GTIC
+## Quando direcionar para GETIC
 
 Use este direcionamento quando o caso envolver principalmente:
 
@@ -74,8 +74,8 @@ Use este direcionamento quando houver indício de:
 
 | Situação predominante | Direcionamento provável |
 |---|---|
-| Dúvida de processo / regra / fluxo esperado | AGECOM |
-| Erro técnico de ambiente / indisponibilidade / infraestrutura | GTIC |
+| Dúvida de processo / regra / fluxo esperado | GECON |
+| Erro técnico de ambiente / indisponibilidade / infraestrutura | GETIC |
 | Bug, comportamento inconsistente ou ajuste de sistema | Devs |
 
 ---
