@@ -1,89 +1,32 @@
-# Como registrar novos casos
+# Como alimentar a base
 
-Esta página orienta como manter a base atualizada sem perder consistência, clareza e confiabilidade.
+> 📌 Esta página orienta como a equipe pode manter a central atualizada sem perder padrão, clareza e confiabilidade.
 
----
+## Quando registrar um novo caso
 
-## Quando registrar
+- erro recorrente no suporte
+- tratativa validada que pode ajudar outras pessoas
+- fluxo que gera dúvida frequente
+- caso que costuma ser escalado repetidamente
 
-Registre um novo caso quando:
+## O que deve entrar em um registro
 
-- o erro se repete com frequência
-- a tratativa foi validada e pode ajudar outras pessoas
-- o fluxo ou processo precisa ficar documentado
-- a situação gera dúvida recorrente na equipe
-- o escalonamento para o mesmo problema se repete
+Todo novo caso deve responder, no mínimo:
 
----
+- o que aconteceu
+- em que contexto aconteceu
+- qual a causa identificada
+- qual foi a solução aplicada
+- quando escalar e para qual área
 
-## O que todo registro precisa ter
+## Fluxo simples de atualização
 
-- O que aconteceu
-- Em que contexto aconteceu
-- Qual a causa identificada (se ainda não confirmada, diga isso explicitamente)
-- Qual foi a solução aplicada
-- Quando escalar e para qual área
-
-Se alguma informação não estiver confirmada, registre da seguinte forma:
-> Causa em análise — padrão ainda não confirmado pela equipe.
-
----
-
-## Estrutura obrigatória
-
-```markdown
-## Título descritivo do erro
-
-**Mensagem:**
-
-MENSAGEM EXATA DO ERRO
-
-**Causa:** Explicação do motivo.
-
-**O que fazer:**
-1. Passo 1
-2. Passo 2
-
-**Atenção:** Observações relevantes.
-
-**Encaminhar para:** GECON / GETIC / DevOps — com informações adicionais.
-```
-
-O modelo completo está em [Modelo de novo caso](modelo-de-registro.md).
-
----
-
-## Fluxo de atualização
-
-1. Identificar o caso que merece registro
+1. Identificar o caso
 2. Escolher a categoria correta
-3. Preencher o modelo padrão
-4. Revisar se o texto está claro e objetivo
-5. Confirmar se as informações são confiáveis
-6. Publicar no repositório
+3. Registrar no padrão da central
+4. Revisar linguagem e clareza
+5. Publicar no repositório
 
----
+## Observação importante
 
-## Onde cada tipo de caso vai
-
-| Tipo de caso | Página |
-|---|---|
-| API, WSO2, serviço externo, sincronização | integracoes.md |
-| ERP, faturamento, cadastro, cobrança | benner.md |
-| Permissões, acessos, onboarding | acessos.md |
-| Caso reincidente com histórico de chamados | problemas.md |
-| Novo chamado aberto | chamados.md |
-
----
-
-## O que evitar
-
-- Publicar causas prováveis como se fossem confirmadas
-- Adicionar contatos sem validação prévia
-- Textos longos demais — priorize leitura rápida
-- Escalonamento sem critério claro
-- Passos incompletos ou ambíguos
-
----
-
-*Última revisão: Abril 2026*
+O próprio Renan comentou que muita documentação ainda nasce “no chute” e vai sendo consolidada na planilha. Isso reforça que todo caso novo relevante deve voltar para a base e virar aprendizado reaproveitável. fileciteturn3file0

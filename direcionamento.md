@@ -1,80 +1,61 @@
 # Direcionamento e escalonamento
 
-Esta página ajuda a decidir para qual equipe um caso deve ser encaminhado quando não puder ser resolvido no suporte.
+> 📌 Página de apoio à decisão de escalonamento.
 
----
+## 🧠 Decisão rápida de escalonamento
 
-## Antes de escalar
-
-Verifique:
-
-1. O contexto do erro — em qual sistema e em qual fluxo aconteceu
-2. A mensagem exata de erro, se houver
-3. Se o caso já tem tratativa documentada em [Integrações](integracoes.md) ou [Benner](benner.md)
-4. Se já existe chamado aberto para o mesmo problema em [Chamados abertos](chamados.md)
-
-Só escale depois de validar esses quatro pontos.
-
----
-
-## Quando encaminhar para GECON
-
-Use esse direcionamento quando o caso envolver principalmente:
-
-- regra de negócio ou processo que a equipe financeira precisa validar
-- configurações no Benner que dependem da área financeira (contas, centros de custo, boletos)
-- cadastros de produto, filial ou vínculos que precisam ser completados
-- dúvida sobre como o processo deveria funcionar
-
-| Tipo de problema | Contato |
+| Tipo de problema | Destino provável |
 |---|---|
-| Configurações financeiras no Benner | carolini.silveira@fiesc.com.br, marcos@fiesc.com.br |
-| Cadastros de produto e filial | otavio.l.santos@fiesc.com.br, jackson.faria@fiesc.com.br, silvana.tkaczuk@fiesc.com.br |
+| Regra de negócio / cadastro funcional | GECON |
+| Cadastro financeiro / centro de custo / produto x filial | GECON |
+| Erro técnico de integração / indisponibilidade / dependência entre sistemas | GETIC |
+| Permissão de endpoint / WSO2 / autenticação técnica | DevOps |
+| Bug / comportamento incoerente / necessidade de ajuste estrutural | Devs |
 
----
+## Regra geral
 
-## Quando encaminhar para GETIC
+Antes de escalar, o suporte deve sempre validar:
 
-Use esse direcionamento quando o caso envolver principalmente:
+1. contexto do erro
+2. sistema envolvido
+3. mensagem de erro
+4. evidências mínimas
+5. se o caso já possui tratativa documentada
 
-- falha técnica de ambiente ou infraestrutura
-- integração interrompida sem causa funcional identificada
-- erro sistêmico que afeta mais de um usuário ou operação
-- problemas no Benner que não dependem de configuração da área de negócio
+## Quando direcionar para GECON
 
----
+- cadastro financeiro
+- centro de custo
+- conta financeira
+- produto x filial
+- configuração funcional no Benner
+- dúvidas de processo e regra de negócio
 
-## Quando encaminhar para DevOps
+## Quando direcionar para GETIC
 
-Use esse direcionamento quando houver:
+- falha técnica de ambiente
+- indisponibilidade
+- erro sistêmico
+- integração travada
+- divergência técnica entre sistemas
+- casos recorrentes que exigem causa raiz
 
-- problema de permissão em API (WSO2)
-- comportamento de sistema que parece ser bug
-- falha específica de fluxo que já foi descartada como configuração ou regra de negócio
+## Quando direcionar para DevOps
 
----
+- permissão no WSO2
+- endpoint não autorizado
+- autenticação técnica
+- API subscription validation failed
 
-## Tabela de decisão rápida
+## Quando direcionar para devs
 
-| Situação | Direcionamento |
-|---|---|
-| Configuração financeira, regra de negócio, cadastro incompleto | GECON |
-| Falha técnica, infraestrutura, integração interrompida | GETIC |
-| Permissão de API, bug de sistema | DevOps |
+- bug claro
+- comportamento incoerente
+- erro reproduzível sem tratativa
+- payload errado que exige análise técnica do squad
 
----
+## Observação importante
 
-## O que enviar junto em qualquer escalonamento
+Nem sempre o destino fica óbvio no primeiro olhar. O próprio Renan sinalizou que, quando não está na planilha, ainda existe lacuna de documentação. Nesses casos, o ideal é registrar o aprendizado depois da tratativa.
 
-- Número do chamado
-- Descrição objetiva do problema em no máximo duas linhas
-- Sistema afetado
-- Mensagem exata do erro
-- Print ou evidência visual
-- O que já foi validado ou tentado pelo suporte
-
-Quanto mais organizado chegar o escalonamento, mais rápido a equipe de destino consegue atuar.
-
----
-
-*Última revisão: Abril 2026*
+*Estrutura-base para padronizar o raciocínio do suporte.*

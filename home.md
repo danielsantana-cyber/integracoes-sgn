@@ -1,72 +1,71 @@
-# Central Operacional de Suporte — SGN
+# Central Operacional — Suporte SGN
 
-Esta base foi construida para apoiar o dia a dia do suporte com informacoes concretas vindas da operacao real. Cada tratativa aqui documentada foi validada com o time de desenvolvimento.
+> 📌 Esta central foi criada para orientar o suporte do SGN na identificação de erros, validação inicial, tratativa correta e escalonamento seguro.
 
----
+> O foco desta base não é apenas documentar problemas. O objetivo é ajudar qualquer pessoa do suporte a entender rapidamente **o que está acontecendo, o que deve ser validado, o que pode ser tratado no próprio suporte e para qual equipe o caso deve ser direcionado**.
 
-## Para que serve esta central
+## 🚀 Decisão rápida do suporte
 
-Qualquer pessoa do suporte, ao consultar esta base, deve conseguir responder:
+Se você caiu aqui, siga este fluxo:
 
-- Qual e o erro ou sintoma que estou vendo?
-- Existe tratativa documentada para esse caso?
-- Consigo resolver no proprio suporte ou preciso escalar?
-- Se precisar escalar, vai para GECON, GETIC ou devs?
-- Quais evidencias preciso enviar junto?
+1. Identifique o erro ou sintoma
+2. Vá para a categoria correta
+3. Verifique o que já foi validado
+4. Decida se deve:
+   - aprovar retorno
+   - reenviar
+   - forçar reenvio
+   - escalar
 
----
+## Regra de ouro
 
-## Onde esta cada coisa
+Antes de escalar:
 
-| Secao | O que voce encontra |
+- valide o contexto
+- verifique logs e protocolos
+- veja se já existe tratativa
+- evite escalonamento desnecessário
+
+👉 Suporte bom resolve  
+👉 Suporte excelente evita escalar errado
+
+## O que o suporte deve conseguir fazer com esta base
+
+Ao consultar esta central, a pessoa do suporte deve conseguir responder rapidamente:
+
+1. Que erro ou sintoma estou vendo?
+2. O que preciso validar antes de agir?
+3. Esse caso eu resolvo no suporte ou preciso escalar?
+4. Se precisar escalar, vai para GECON, GETIC, DevOps ou devs?
+5. Quais evidências devo enviar no escalonamento?
+
+## Estrutura principal
+
+| Área | Finalidade |
 |---|---|
-| [Primeiros acessos ao SGN](acessos.md) | Como solicitar acesso, validar permissoes e iniciar a operacao |
-| [Tratativa de chamados no SGN](fluxo-tratativa.md) | O que fazer antes de escalar qualquer caso |
-| [Integracoes](integracoes.md) | Erros tecnicos entre sistemas, APIs e sincronizacoes |
-| [Benner](benner.md) | Erros ligados ao ERP, faturamento, cadastros e documentos |
-| [Erros operacionais do dia a dia](erros-operacionais.md) | Casos reais com tratativas validadas pelo time de desenvolvimento |
-| [PIX](pix.md) | Fluxo especifico de integracao de pagamentos via PIX |
-| [Unidade nao integrada](unidade-nao-integrada.md) | Processo para resolver erro de unidade sem cadastro no Benner |
-| [Como usar o Dashboard SGN](dashboard-sgn.md) | Links, abas, rotina diaria e como navegar no dashboard |
-| [Chamados abertos](chamados.md) | Registro de chamados em andamento e status atual |
-| [Direcionamento e escalonamento](direcionamento.md) | Como decidir para qual equipe encaminhar o caso |
-| [Problemas recorrentes](problemas.md) | Padroes repetidos com historico de ocorrencias |
-| [Como registrar novos casos](contribuicao.md) | Fluxo e padrao para manter a base atualizada |
+| [Primeiros acessos ao SGN](acessos.md) | Onboarding, acessos e começo da operação |
+| [Tratativa de chamados no SGN](fluxo-tratativa.md) | Fluxo inicial do suporte antes de escalar |
+| [Direcionamento e escalonamento](direcionamento.md) | Como decidir entre GECON, GETIC, DevOps e devs |
+| [Integrações](integracoes.md) | Erros técnicos, APIs, sincronizações e mensagens de integração |
+| [Benner](benner.md) | Casos ligados ao ERP, faturamento, documentos e cadastros |
+| [Painel de monitoramento](dashboard.md) | Como acompanhar volume e concentração de erros |
+| [Chamados abertos](chamados.md) | Como abrir melhor um chamado e que evidências enviar |
+| [Problemas recorrentes](problemas.md) | Casos repetidos que precisam de causa raiz |
 
----
+## Resultado esperado
 
-## Como usar na pratica
+Com esta central, a equipe reduz:
 
-1. Pesquise pelo erro na barra lateral ou use a busca
-2. Leia o contexto e a causa documentada
-3. Aplique a tratativa descrita
-4. Se necessario, escale com as evidencias indicadas
-5. Se o erro nao estiver documentado, registre seguindo o modelo padrao
+- dúvidas recorrentes
+- escalonamentos errados
+- tempo perdido perguntando o próximo passo
+- dependência de conhecimento informal
 
----
+E aumenta:
 
-## Antes de escalar qualquer caso
+- velocidade de atendimento
+- segurança na tratativa
+- padronização do suporte
+- qualidade do escalonamento
 
-Verifique se ja existe um chamado aberto para o mesmo problema em [Chamados abertos](chamados.md). Isso evita chamados duplicados e acelera a resolucao.
-
----
-
-## Para novos colaboradores
-
-Esta base substitui orientacoes verbais e memoria individual. Antes de perguntar para alguem da equipe, consulte aqui. Se nao encontrar o que precisa, e um sinal de que vale registrar.
-
----
-
-## Canais de acionamento rapido
-
-| Situacao | Canal |
-|---|---|
-| Erro tecnico do Benner, infra, API | Abrir chamado na GETIC via SeSuite |
-| Configuracao financeira, cadastro incompleto | E-mail para GECON |
-| Permissao de API, WSO2 | DevOps |
-| Desconto duplicado, parcela liquidada | Alexandre no grupo de integracoes |
-| Duvida tecnica de integracao | Grupo de integracoes no Hangouts |
-
----
-
-*Versao 1.3 — Squad Integracoes, Movimentacoes Financeiras*
+*Versão 1.2 · Estruturada para apresentação inicial à liderança*

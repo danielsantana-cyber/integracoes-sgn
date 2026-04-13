@@ -1,72 +1,56 @@
 # Primeiros acessos ao SGN
 
-Este guia orienta novos colaboradores sobre como acessar os sistemas, solicitar permissões e validar o início da operação.
+> 📌 Guia de onboarding para novos colaboradores do suporte.
 
----
+## Objetivo desta página
 
-## Sistemas utilizados no suporte
+Ajudar a pessoa que está entrando no suporte a entender:
 
-| Sistema | Para que serve | Quando é usado |
+- onde acessar cada sistema
+- quais acessos precisa pedir
+- como validar se o acesso está correto
+- como começar a operar sem depender só de repasse informal
+
+## Visão geral dos sistemas
+
+| Sistema | Finalidade | Quando é usado |
 |---|---|---|
-| SGN | Operação principal do suporte | Consultas, atendimento e fluxos do dia a dia |
-| Benner | Consulta de informações financeiras | Conferência de dados financeiros e documentais |
-| Integrações | Conexão entre sistemas | Análise de erros técnicos e validação de sincronizações |
+| **SGN** | Operação principal do suporte | Consulta, atendimento e fluxos do dia a dia |
+| **Dashboard de Faturamento** | Acompanhamento das integrações financeiras | Ver erros, protocolos e volume de casos |
+| **Dashboard de Pessoa** | Ver integração de pessoa | Validar CPF/nome e último protocolo |
+| **Benner** | Consulta de informações financeiras | Conferência de dados financeiros e integrações |
 
----
+## Como solicitar acessos
 
-## Como solicitar acesso
-
-1. Confirme com a liderança quais sistemas serão necessários para sua função
-2. Solicite a liberação pelos canais internos definidos pela equipe
-3. Aguarde confirmação de que o acesso foi configurado
-4. Valide o acesso antes de iniciar a operação
-
-> Os links de acesso e os responsáveis pela liberação devem ser preenchidos pela equipe antes da publicação definitiva desta página.
-
----
+1. Confirmar com a liderança quais acessos são necessários
+2. Solicitar pelos canais internos definidos pela equipe
+3. Validar login e menus disponíveis
+4. Confirmar se consegue consultar protocolos, dashboard e informações básicas
 
 ## Onde acessar cada sistema
 
-| Sistema | Link |
-|---|---|
-| SGN | A definir pela equipe |
-| Benner | Aplicativo interno |
+> Antes da publicação oficial no Git da empresa, substituir pelos links finais e validar responsáveis.
 
----
+- Dashboard SGN — Integração Faturamento
+- Dashboard SGN — Integração Pessoa
+- SGN — telas operacionais
+- Benner — consulta financeira
 
 ## Checklist de primeiro acesso
 
-Antes de iniciar a operação, valide:
+- login funcionando
+- acesso ao SGN
+- acesso ao dashboard de faturamento
+- acesso ao dashboard de pessoa
+- capacidade de consulta básica no Benner
+- conhecimento de onde consultar erros nesta central
 
-- Login funcionando em todos os sistemas necessários
-- Permissões compatíveis com a função
-- Acesso aos menus e telas principais
-- Capacidade de consulta no Benner
-- Leitura das principais seções desta base de conhecimento
+## Primeiros passos
 
----
+1. Entender o que é envio de cobrança e o que é alteração de cobrança
+2. Aprender a consultar protocolos
+3. Saber diferenciar erro de retorno, erro de envio e caso já integrado
+4. Conhecer as tratativas mais comuns em Integrações e Benner
+5. Saber quando escalar
 
-## Primeiros passos após receber os acessos
-
-1. Validar login em todos os sistemas
-2. Navegar pelas telas principais para entender o layout
-3. Ler esta base de conhecimento, especialmente as páginas de [Integrações](integracoes.md) e [Benner](benner.md)
-4. Acompanhar os primeiros atendimentos com apoio de alguém da equipe
-5. Registrar qualquer inconsistência de acesso antes de atender sozinho
-
----
-
-## Problemas comuns de acesso
-
-**Login funciona, mas menus ou telas não aparecem**
-O perfil liberado pode estar incompleto. Validar com o responsável se o perfil correto foi configurado.
-
-**Acesso ainda não disponível após solicitação**
-Confirmar com a equipe se a liberação foi concluída e se há etapas pendentes.
-
-**Não sabe a quem solicitar o acesso**
-Seguir a orientação da liderança direta até que o fluxo esteja documentado aqui.
-
----
-
-*Última revisão: Abril 2026*
+*Base inicial de onboarding do suporte SGN.*

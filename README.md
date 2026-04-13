@@ -1,85 +1,32 @@
-# Central de Conhecimento — Suporte SGN
+# Central Operacional — Suporte SGN
 
-Base de conhecimento operacional para a equipe de suporte do Squad Integracoes, Movimentacoes Financeiras. Construida com base em casos reais da operacao.
+Base voltada para o suporte do SGN, com foco em tratativa inicial, decisão rápida, escalonamento seguro e reaproveitamento do conhecimento operacional do time.
 
-Versao 1.2 — Abril 2026
+## Estrutura principal
 
----
+- `home.md` — visão geral da central
+- `acessos.md` — onboarding e primeiros acessos
+- `fluxo-tratativa.md` — fluxo inicial do suporte
+- `direcionamento.md` — para quem escalar
+- `integracoes.md` — erros e tratativas de integração
+- `benner.md` — erros e tratativas ligados ao Benner
+- `dashboard.md` — como usar o painel de monitoramento
+- `chamados.md` — padrão de abertura e evidências mínimas
+- `problemas.md` — padrões recorrentes e causa raiz
+- `contribuicao.md` — governança da base
+- `modelo-de-registro.md` — modelo para novos casos
 
-## O que este projeto entrega
+## Objetivo
 
-- Documentacao de erros reais com tratativas validadas
-- Pagina de chamados abertos para consulta antes de escalar
-- Fluxo de tratativa inicial padronizado
-- Guia de direcionamento entre GECON, GETIC e DevOps
-- Onboarding para novos colaboradores
-- Template e governanca para manutencao continua
+Ajudar qualquer pessoa do suporte a:
 
----
+- identificar o erro
+- validar o contexto
+- decidir se trata, aprova, reenvia ou escala
+- direcionar para a equipe certa com mais rapidez
+- reduzir dependência de conhecimento informal
 
-## Estrutura do projeto
+## Observação
 
-```
-integracoes-sgn/
-├── index.html               Entrada do site (Docsify)
-├── README.md                Este arquivo
-├── .nojekyll                Necessario para GitHub Pages
-├── home.md                  Pagina inicial
-├── _sidebar.md              Navegacao lateral
-├── integracoes.md           Erros de integracao entre sistemas
-├── benner.md                Erros do ERP Benner
-├── chamados.md              Chamados abertos e historico
-├── problemas.md             Padroes recorrentes com historico
-├── dashboard.md             Painel de monitoramento
-├── direcionamento.md        Como decidir para onde escalar
-├── fluxo-tratativa.md       Fluxo inicial do suporte
-├── acessos.md               Primeiros acessos e onboarding
-├── contribuicao.md          Como alimentar a base
-└── modelo-de-registro.md    Template para novos casos
-```
-
----
-
-## Como ativar no GitHub Pages
-
-1. Fazer upload do projeto em um repositorio no GitHub
-2. Acessar Settings > Pages
-3. Em Source, selecionar Deploy from a branch
-4. Selecionar branch main e pasta / (root)
-5. Clicar em Save
-6. Aguardar alguns minutos — o link aparece em Settings > Pages
-
----
-
-## Como manter a base atualizada
-
-**Novo erro identificado:**
-1. Abrir o arquivo da categoria correta (integracoes.md ou benner.md)
-2. Adicionar o caso seguindo o modelo em modelo-de-registro.md
-3. Revisar clareza e objetividade
-4. Publicar via commit
-
-**Novo chamado aberto:**
-1. Adicionar linha na tabela "Chamados em aberto" em chamados.md
-2. Incluir: numero, problema, sistema, data, responsavel
-
-**Chamado encerrado:**
-1. Mover a linha para a tabela "Concluidos" em chamados.md
-2. Adicionar a data de encerramento
-
----
-
-## Principios de governanca
-
-Registre apenas o que foi confirmado. Causas em analise devem ser sinalizadas como tal. Escalonamento sem criterio claro nao deve ser publicado. Contatos devem ser validados pela equipe antes de entrar na base.
-
----
-
-## Cobertura atual
-
-| Categoria | Conteudo |
-|---|---|
-| Integracoes | 14 erros documentados |
-| Benner | 15 erros documentados |
-| Chamados abertos | 17 em acompanhamento |
-| Problemas recorrentes | 5 padroes com historico |
+O foco principal desta base está em **SGN, Integrações e Benner**.  
+O painel de monitoramento entra como apoio operacional.
