@@ -6,7 +6,7 @@
   <title>Central de Conhecimento — Suporte SGN</title>
   <meta name="description" content="Base de conhecimento operacional — Squad Integracoes, Movimentacoes Financeiras">
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
@@ -127,8 +127,9 @@
       padding: 0 10px !important;
     }
 
-    .sidebar ul li a {
-      color: rgba(255,255,255,0.58) !important;
+    .sidebar ul li a,
+    .sidebar-nav a {
+      color: rgba(255,255,255,0.80) !important;
       font-size: 13px !important;
       font-weight: 400 !important;
       padding: 5px 10px !important;
@@ -138,32 +139,37 @@
       text-decoration: none !important;
     }
 
-    .sidebar ul li a:hover {
-      color: rgba(255,255,255,0.9) !important;
-      background: rgba(255,255,255,0.06) !important;
+    .sidebar ul li a:hover,
+    .sidebar-nav a:hover {
+      color: #ffffff !important;
+      background: rgba(255,255,255,0.08) !important;
+      border-radius: 6px;
     }
 
-    .sidebar ul li.active > a {
+    .sidebar ul li.active > a,
+    .sidebar-nav li.active > a {
       color: #FFFFFF !important;
-      background: rgba(255,255,255,0.1) !important;
-      font-weight: 500 !important;
+      background: rgba(255,255,255,0.14) !important;
+      border-radius: 6px;
+      font-weight: 600 !important;
     }
 
-    /* Section labels — CSS fallback */
-    .sidebar ul p,
-    .sidebar ul p strong,
-    .sidebar ul li p,
-    .sidebar ul li p strong,
-    .sidebar-nav ul p,
-    .sidebar-nav ul p strong {
-      color: #FFFFFF !important;
-      font-size: 10px !important;
+    /* Section labels — corrigido */
+    .sidebar-nav > ul > li > p,
+    .sidebar-nav > ul > li > strong,
+    .sidebar-nav > ul > li > em,
+    .sidebar-nav > ul > li > span,
+    .sidebar-nav li p,
+    .sidebar-nav li strong {
+      color: #ffffff !important;
       font-weight: 700 !important;
+      font-size: 10px !important;
       letter-spacing: 0.1em !important;
       text-transform: uppercase !important;
       font-family: 'Inter', -apple-system, sans-serif !important;
-      padding: 20px 10px 5px !important;
+      opacity: 1 !important;
       margin: 0 !important;
+      padding: 20px 10px 5px !important;
       display: block !important;
     }
 
