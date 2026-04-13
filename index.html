@@ -12,14 +12,14 @@
 
   <style>
     :root {
-      --brand-dark:     #0F1923;
-      --brand-navy:     #1A2B3C;
-      --brand-blue:     #1B6CA8;
-      --brand-accent:   #2E86C1;
-      --brand-subtle:   #F5F7FA;
-      --brand-border:   #E2E8F0;
-      --brand-text:     #1A202C;
-      --brand-muted:    #64748B;
+      --brand-dark:     #082c6c;
+      --brand-navy:     #072d6b;
+      --brand-blue:     #0b57d0;
+      --brand-accent:   #0b57d0;
+      --brand-subtle:   #f8fafc;
+      --brand-border:   #e5e7eb;
+      --brand-text:     #1f2937;
+      --brand-muted:    #6b7280;
       --brand-success:  #166534;
       --brand-danger:   #991B1B;
 
@@ -34,26 +34,26 @@
       --sidebar-width:         272px;
 
       --heading-color:         var(--brand-text);
-      --link-color:            var(--brand-accent);
+      --link-color:            var(--brand-blue);
       --code-font-family:      'JetBrains Mono', monospace;
-      --code-inline-color:     var(--brand-blue);
-      --code-inline-background-color: #EBF5FB;
-      --code-theme-background: #0D1B2A;
+      --code-inline-color:     #1e3a8a;
+      --code-inline-background-color: #f4f8ff;
+      --code-theme-background: #072d6b;
     }
 
     * { box-sizing: border-box; }
 
     /* ── Sidebar ─────────────────────────────── */
     .sidebar {
-      background: var(--brand-dark) !important;
-      border-right: 1px solid rgba(255,255,255,0.05) !important;
+      background: linear-gradient(180deg, #082c6c 0%, #07275f 100%) !important;
+      border-right: 1px solid var(--brand-border) !important;
     }
 
     .sidebar::before {
       content: '';
       display: block;
       height: 3px;
-      background: linear-gradient(90deg, var(--brand-blue) 0%, var(--brand-accent) 100%);
+      background: linear-gradient(90deg, #0b57d0 0%, #3b82f6 100%);
     }
 
     .sidebar .app-name {
@@ -93,9 +93,9 @@
     }
 
     .search input {
-      background: rgba(255,255,255,0.06) !important;
-      border: 1px solid rgba(255,255,255,0.08) !important;
-      border-radius: 6px !important;
+      background: rgba(255,255,255,0.1) !important;
+      border: 1px solid rgba(255,255,255,0.18) !important;
+      border-radius: 10px !important;
       color: #FFF !important;
       font-family: 'Inter', sans-serif;
       font-size: 13px;
@@ -105,8 +105,8 @@
     }
 
     .search input:focus {
-      background: rgba(255,255,255,0.1) !important;
-      border-color: var(--brand-accent) !important;
+      background: rgba(255,255,255,0.14) !important;
+      border-color: rgba(255,255,255,0.35) !important;
       outline: none;
     }
 
@@ -145,7 +145,7 @@
 
     .sidebar ul li.active > a {
       color: #FFFFFF !important;
-      background: rgba(43,134,193,0.2) !important;
+      background: rgba(255,255,255,0.1) !important;
       font-weight: 500 !important;
     }
 
@@ -184,7 +184,7 @@
       margin-top: 48px !important;
       padding: 11px 16px !important;
       background: var(--brand-subtle);
-      border-left: 3px solid var(--brand-blue);
+      border-left: 4px solid #0b57d0;
       border-radius: 0 6px 6px 0;
       letter-spacing: -0.01em;
     }
@@ -207,20 +207,20 @@
 
     /* ── Blockquote ──────────────────────────── */
     blockquote {
-      background: #EBF5FB !important;
-      border-left: 3px solid var(--brand-blue) !important;
+      background: #f4f8ff !important;
+      border-left: 4px solid #0b57d0 !important;
       border-radius: 0 6px 6px 0;
       padding: 12px 18px !important;
       margin: 0 0 20px 0 !important;
-      color: var(--brand-navy) !important;
+      color: #243b53 !important;
       font-size: 14px;
     }
 
-    blockquote p { margin: 0 !important; color: var(--brand-navy) !important; }
+    blockquote p { margin: 0 !important; color: #243b53 !important; }
 
     /* ── Code ─────────────────────────────────── */
     pre {
-      background: #0D1B2A !important;
+      background: #072d6b !important;
       border-radius: 8px !important;
       padding: 18px 22px !important;
       margin: 12px 0 !important;
@@ -229,14 +229,14 @@
     pre code {
       font-family: 'JetBrains Mono', monospace !important;
       font-size: 13px !important;
-      color: #93C6E0 !important;
+      color: #93c5fd !important;
       line-height: 1.65;
     }
 
     code {
       font-family: 'JetBrains Mono', monospace !important;
-      background: #EBF5FB !important;
-      color: var(--brand-blue) !important;
+      background: #f4f8ff !important;
+      color: #1e3a8a !important;
       padding: 2px 6px !important;
       border-radius: 3px !important;
       font-size: 13px !important;
@@ -253,7 +253,7 @@
       font-size: 14px;
     }
 
-    thead tr { background: var(--brand-dark) !important; }
+    thead tr { background: #082c6c !important; }
 
     thead th {
       color: #FFFFFF !important;
@@ -264,9 +264,9 @@
       padding: 11px 16px !important;
     }
 
-    tbody tr:nth-child(odd)  { background: #FAFBFC; }
+    tbody tr:nth-child(odd)  { background: #f8fafc; }
     tbody tr:nth-child(even) { background: #FFFFFF; }
-    tbody tr:hover           { background: #EBF5FB !important; transition: background 0.1s; }
+    tbody tr:hover           { background: #eef2ff !important; transition: background 0.1s; }
 
     tbody td {
       padding: 9px 16px !important;
@@ -293,7 +293,7 @@
 
     /* ── Progress bar ────────────────────────── */
     #nprogress .bar {
-      background: var(--brand-accent) !important;
+      background: #0b57d0 !important;
       height: 2px !important;
     }
 
@@ -330,7 +330,7 @@
 
     /* ── Sidebar toggle ──────────────────────── */
     .sidebar-toggle {
-      background: var(--brand-blue) !important;
+      background: #0b57d0 !important;
       border-radius: 0 5px 5px 0 !important;
     }
 
@@ -343,10 +343,10 @@
 </head>
 <body>
   <div id="app">
-    <div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;background:#0F1923;gap:14px;">
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;background:linear-gradient(180deg,#082c6c 0%,#07275f 100%);gap:14px;">
       <div style="color:#FFFFFF;font-size:15px;font-weight:600;letter-spacing:-0.01em;">Central de Conhecimento</div>
       <div style="color:rgba(255,255,255,0.3);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;">Suporte SGN</div>
-      <div style="margin-top:8px;width:32px;height:32px;border:2px solid rgba(255,255,255,0.1);border-top-color:#2E86C1;border-radius:50%;animation:spin 0.7s linear infinite;"></div>
+      <div style="margin-top:8px;width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#93c5fd;border-radius:50%;animation:spin 0.7s linear infinite;"></div>
     </div>
   </div>
 
