@@ -2,7 +2,7 @@
 
 ---
 
-**Operacao**
+Operacao
 
 * [Primeiros acessos ao SGN](acessos.md)
 * [Tratativa de chamados no SGN](fluxo-tratativa.md)
@@ -10,7 +10,7 @@
 
 ---
 
-**Erros e tratativas**
+Erros e tratativas
 
 * [Integracoes](integracoes.md)
 * [Benner](benner.md)
@@ -20,7 +20,7 @@
 
 ---
 
-**Acompanhamento**
+Acompanhamento
 
 * [Chamados abertos](chamados.md)
 * [Problemas recorrentes](problemas.md)
@@ -28,13 +28,13 @@
 
 ---
 
-**Como usar o SGN**
+Como usar o SGN
 
 * [Dashboard de integracoes](dashboard-sgn.md)
 
 ---
 
-**Governanca da base**
+Governanca da base
 
 * [Como registrar novos casos](contribuicao.md)
 * [Modelo de novo caso](modelo-de-registro.md)
