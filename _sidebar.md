@@ -28,13 +28,13 @@ Acompanhamento
 
 ---
 
-**Como usar o SGN**
+Como usar o SGN
 
 * [Dashboard de integracoes](dashboard-sgn.md)
 
 ---
 
-**Governanca da base**
+Governanca da base
 
 * [Como registrar novos casos](contribuicao.md)
 * [Modelo de novo caso](modelo-de-registro.md)
