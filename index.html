@@ -154,31 +154,27 @@
       font-weight: 600 !important;
     }
 
-    /* Section labels — corrigido */
-    .sidebar-nav > ul > li > p,
-    .sidebar-nav > ul > li > strong,
-    .sidebar-nav > ul > li > em,
-    .sidebar-nav > ul > li > span,
-    .sidebar-nav li p,
-    .sidebar-nav li strong {
-      color: #ffffff !important;
-      font-weight: 700 !important;
-      font-size: 10px !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
-      font-family: 'Inter', -apple-system, sans-serif !important;
-      opacity: 1 !important;
-      margin: 0 !important;
-      padding: 20px 10px 5px !important;
-      display: block !important;
-    }
-
-    /* Apenas força os labels de seção da sidebar para branco */
+    /* Section labels — corrigido de verdade */
+    .sidebar ul p,
+    .sidebar ul p strong,
+    .sidebar ul li p,
+    .sidebar ul li p strong,
+    .sidebar ul li strong,
+    .sidebar-nav ul p,
+    .sidebar-nav ul p strong,
     .sidebar-nav li p,
     .sidebar-nav li p strong,
     .sidebar-nav li strong {
       color: #ffffff !important;
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      padding: 20px 10px 5px !important;
+      margin: 0 !important;
       opacity: 1 !important;
+      display: block !important;
+      font-family: 'Inter', -apple-system, sans-serif !important;
     }
 
     /* ── Main content ─────────────────────────── */
@@ -398,13 +394,9 @@
         function(hook) {
           hook.doneEach(function() {
 
-            // Forcar cor branca nos labels de secao da sidebar
-            document.querySelectorAll('.sidebar ul p, .sidebar ul li p').forEach(function(el) {
-              el.style.cssText = 'color:#FFFFFF !important; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:Inter,-apple-system,sans-serif; padding:20px 10px 5px; margin:0; display:block;';
-              var strong = el.querySelector('strong');
-              if (strong) {
-                strong.style.cssText = 'color:#FFFFFF !important; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:Inter,-apple-system,sans-serif;';
-              }
+            // Forçar cor branca nos labels de seção da sidebar
+            document.querySelectorAll('.sidebar ul p, .sidebar ul li p, .sidebar ul li strong, .sidebar ul p strong').forEach(function(el) {
+              el.style.cssText = 'color:#FFFFFF !important; font-size:10px !important; font-weight:700 !important; letter-spacing:0.1em !important; text-transform:uppercase !important; font-family:Inter,-apple-system,sans-serif !important; padding:20px 10px 5px !important; margin:0 !important; display:block !important; opacity:1 !important;';
             });
 
             // Footer
