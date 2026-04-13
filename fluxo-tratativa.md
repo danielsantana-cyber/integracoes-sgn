@@ -1,93 +1,72 @@
-# Tratativa de Chamados no SGN
+# Tratativa de chamados no SGN
 
-> 📌 Esta página orienta o fluxo inicial que o suporte deve seguir ao receber um chamado ou incidente relacionado ao SGN.
-
----
-
-## Objetivo desta página
-
-Padronizar a atuação do suporte antes do escalonamento.
-
-A ideia é evitar três problemas comuns:
-
-- escalar cedo demais
-- escalar para a equipe errada
-- escalar sem evidência suficiente
+Esta página orienta o que fazer ao receber um chamado ou incidente. Seguir esse fluxo antes de escalar reduz erros de direcionamento e acelera a resolução.
 
 ---
 
 ## Fluxo inicial recomendado
 
-Quando um chamado chegar, siga esta ordem:
+Ao receber um chamado, siga essa ordem:
 
-1. Identificar o erro, sintoma ou comportamento relatado
-2. Entender em qual contexto ele acontece
-3. Validar o básico no SGN e nos sistemas envolvidos
-4. Verificar se já existe tratativa documentada na central
-5. Aplicar a tratativa do suporte, quando possível
-6. Escalar apenas quando o caso realmente exigir
-
----
-
-## Validação inicial antes de escalar
-
-Antes de encaminhar qualquer caso, validar:
-
-- empresa, usuário ou contexto afetado
-- tela ou processo em que o erro ocorre
-- mensagem exata do erro, quando existir
-- se o problema é recorrente ou pontual
-- se envolve apenas SGN ou também Integrações / Benner
-- se já existe caso semelhante documentado nesta central
+1. Identifique o erro, sintoma ou comportamento relatado
+2. Entenda em qual contexto ele acontece — qual sistema, qual fluxo, qual usuário
+3. Faça a validação básica antes de qualquer ação
+4. Verifique se existe tratativa documentada nesta base
+5. Aplique a tratativa, se possível
+6. Escale apenas se o caso realmente exigir
 
 ---
 
-## O que o suporte deve tentar resolver primeiro
+## O que validar antes de agir
 
-Sempre que aplicável, o suporte deve:
+- Empresa, usuário ou contexto afetado
+- Tela ou fluxo onde o erro acontece
+- Mensagem exata do erro
+- Se o problema é pontual ou se outros usuários também estão sendo afetados
+- Se envolve apenas o SGN ou também Integrações e Benner
+- Se já existe caso semelhante documentado nesta base
 
-- validar se o erro é operacional ou técnico
-- confirmar se o fluxo usado está correto
-- verificar se o usuário tem o acesso necessário
-- confirmar se o cadastro ou dado base está consistente
-- revisar se há tratativa já documentada para aquele erro
+---
+
+## O que o suporte deve tentar resolver antes de escalar
+
+- Confirmar se o fluxo que o usuário usou está correto
+- Verificar se o usuário tem o acesso necessário para aquela operação
+- Confirmar se o cadastro ou dado base está consistente
+- Comparar com tratativas já registradas na base
 
 ---
 
 ## Quando não escalar imediatamente
 
-Evite escalonar de imediato quando o caso ainda depende de:
+Não escale antes de validar:
 
-- validação básica do fluxo
-- conferência de acesso
-- análise de mensagem de erro já conhecida
-- confirmação de contexto com o solicitante
-- comparação com tratativas já registradas
-
----
-
-## Evidências mínimas para escalonamento
-
-Quando o caso realmente precisar subir, enviar junto no escalonamento:
-
-- número do chamado
-- empresa / unidade / contexto afetado
-- tela ou funcionalidade envolvida
-- mensagem exata do erro
-- print ou evidência visual
-- horário aproximado da ocorrência
-- o que já foi validado pelo suporte
-
-> Quanto melhor vier o escalonamento, menor o tempo perdido pela equipe de destino.
+- o contexto do chamado
+- o acesso do usuário
+- a mensagem de erro
+- se existe tratativa já documentada
 
 ---
 
-## Como esta página se conecta com o restante da central
+## O que enviar quando for necessário escalar
 
-- Se o erro for técnico entre sistemas, vá para [Integrações](integracoes.md)
-- Se o erro estiver ligado ao ERP, vá para [Benner](benner.md)
-- Se a dúvida for para quem escalar, vá para [Direcionamento e Escalonamento](direcionamento.md)
+- Número do chamado
+- Empresa, unidade ou contexto afetado
+- Tela ou funcionalidade envolvida
+- Mensagem exata do erro
+- Print ou evidência visual
+- Horário aproximado da ocorrência
+- O que já foi validado pelo suporte
 
 ---
 
-*Esta página serve como guia operacional inicial da equipe de suporte no SGN.*
+## Como este fluxo se conecta com o restante da base
+
+- Erro técnico entre sistemas: vá para [Integrações](integracoes.md)
+- Erro ligado ao ERP: vá para [Benner](benner.md)
+- Dúvida sobre para quem encaminhar: vá para [Direcionamento e escalonamento](direcionamento.md)
+- Verificar se já existe chamado aberto: vá para [Chamados abertos](chamados.md)
+
+---
+
+*Última revisão: Abril 2026*

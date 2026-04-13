@@ -1,72 +1,79 @@
-# Modelo de Novo Caso
+# Modelo de novo caso
 
->  Use este modelo sempre que a equipe precisar registrar um novo erro, processo ou tratativa na Central de Conhecimento.
+Use este modelo sempre que precisar registrar um novo erro, processo ou tratativa na base.
 
 ---
 
 ## Template padrão
 
 ```markdown
-## Título do caso
+## Título descritivo do erro
 
-** Contexto**  
-Descreva em que cenário o erro acontece.
+**Mensagem:**
 
-** Causa**  
-Explique a causa identificada.  
-Se ainda não estiver validada, escreva:  
+MENSAGEM EXATA DO ERRO (se houver)
+
+**Contexto:**
+Descreva em que cenário o erro acontece. Qual sistema, qual fluxo, qual ação do usuário.
+
+**Causa:**
+Explique a causa identificada.
+Se ainda não estiver validada, escreva:
 "Causa em análise — padrão ainda não confirmado."
 
-** Solução passo a passo**  
-1. Primeiro passo  
-2. Segundo passo  
+**O que fazer:**
+1. Primeiro passo
+2. Segundo passo
 3. Terceiro passo
 
-** Atenção**  
-Inclua alertas, limitações ou erros comuns.
+**Atenção:**
+Inclua alertas, limitações ou situações em que a tratativa não se aplica.
 
-** Escalonamento**  
-Indique quando escalar e para qual área ou fluxo interno.
+**Encaminhar para:**
+Indique quando escalar e para qual área — GECON, GETIC ou DevOps.
+Inclua referência de chamados anteriores se houver.
 ```
 
 ---
 
 ## Exemplo preenchido
 
-## Erro ao consultar informação no sistema X
+```markdown
+## Conta financeira não configurada no Benner
 
-** Contexto**  
-Ocorre quando o colaborador tenta consultar dados após receber o primeiro acesso.
+**Mensagem:**
 
-** Causa**  
-Perfil liberado sem a permissão necessária para a tela.
+FINOBJ - Validação das contas financeiras: A conta deve ser preenchida!
 
-** Solução passo a passo**  
-1. Validar se o login está funcionando  
-2. Conferir se a tela aparece no menu  
-3. Confirmar com a equipe responsável se o perfil está correto
+**Contexto:**
+Ocorre ao tentar integrar lançamentos financeiros. O sistema rejeita a integração por falta de conta financeira no CR.
 
-** Atenção**  
-Nem todo erro de acesso significa falha no sistema. Muitas vezes é apenas perfil incompleto.
+**Causa:**
+O CR (Centro de Responsabilidade) não tem conta financeira configurada no Benner.
 
-** Escalonamento**  
-Se o perfil correto já tiver sido solicitado e o problema continuar, seguir o fluxo interno definido pela equipe.
+**O que fazer:**
+1. Identificar o CR associado ao lançamento com erro
+2. Verificar no Benner se o CR possui conta financeira cadastrada
+3. Encaminhar para GECON com o nome do CR
+
+**Atenção:**
+Não altere a configuração do CR sem envolver a GECON. Alterações incorretas podem impactar outros lançamentos vinculados.
+
+**Encaminhar para:**
+GECON — carolini.silveira@fiesc.com.br / marcos@fiesc.com.br
+```
 
 ---
 
 ## Checklist antes de publicar
 
-- O título está claro?
-- O contexto está compreensível?
-- A causa está validada ou sinalizada como “em análise”?
-- A solução está em passos simples?
-- O escalonamento está seguro?
-- O texto está curto e objetivo?
+- O título está claro e descreve o erro de forma objetiva?
+- O contexto está compreensível para alguém que não viveu o caso?
+- A causa está validada ou sinalizada como "em análise"?
+- A solução está em passos simples e ordenados?
+- O escalonamento está preciso — para qual área e quando?
+- O texto está curto o suficiente para leitura rápida?
 
 ---
 
-## Dica prática
-
-Quando surgir um novo caso, você pode copiar este modelo, preencher e depois decidir em qual página ele deve ficar.
-
-Isso ajuda a manter a central consistente mesmo quando várias pessoas estiverem alimentando a base.
+*Última revisão: Abril 2026*

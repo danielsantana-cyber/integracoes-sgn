@@ -1,45 +1,31 @@
-* [🏠 Início](home.md)
+* [Inicio](home.md)
 
 ---
 
-* **🔐 Primeiros Acessos ao SGN**
-  * [Visão Geral](acessos.md)
-  * [Como solicitar acessos](acessos.md#como-solicitar-acessos)
-  * [Onde acessar cada sistema](acessos.md#onde-acessar-cada-sistema)
-  * [Checklist de primeiro acesso](acessos.md#checklist-de-primeiro-acesso)
+**Operação**
+
+* [Primeiros acessos ao SGN](acessos.md)
+* [Tratativa de chamados no SGN](fluxo-tratativa.md)
+* [Direcionamento e escalonamento](direcionamento.md)
 
 ---
 
-* **🧭 Tratativa de Chamados no SGN**
-  * [Fluxo Inicial](fluxo-tratativa.md)
-  * [Validação antes de escalar](fluxo-tratativa.md#validação-inicial-antes-de-escalar)
-  * [Evidências mínimas](fluxo-tratativa.md#evidências-mínimas-para-escalonamento)
+**Erros e tratativas**
+
+* [Integracoes](integracoes.md)
+* [Benner](benner.md)
 
 ---
 
-* **⚡ Integrações**
-  * [Visão Geral](integracoes.md)
+**Acompanhamento**
+
+* [Chamados abertos](chamados.md)
+* [Problemas recorrentes](problemas.md)
+* [Painel de monitoramento](dashboard.md)
 
 ---
 
-* **🔗 Benner**
-  * [Visão Geral](benner.md)
+**Governanca da base**
 
----
-
-* **🎯 Direcionamento e Escalonamento**
-  * [Visão Geral](direcionamento.md)
-  * [Quando vai para GECON](direcionamento.md#quando-direcionar-para-gecon)
-  * [Quando vai para GETIC](direcionamento.md#quando-direcionar-para-getic)
-  * [Quando vai para devs](direcionamento.md#quando-direcionar-para-devs)
-
----
-
-* **📍 Painel de Monitoramento**
-  * [Visão Geral](dashboard.md)
-
----
-
-* **🧩 Governança da Base**
-  * [Como Alimentar a Base](contribuicao.md)
-  * [Modelo de Novo Caso](modelo-de-registro.md)
+* [Como registrar novos casos](contribuicao.md)
+* [Modelo de novo caso](modelo-de-registro.md)

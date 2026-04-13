@@ -1,55 +1,50 @@
 # Painel de Monitoramento
 
-> 📌 Esta seção não representa uma frente principal de tratativa. Ela existe para apoiar o suporte na visualização de volume e concentração de erros.
+Esta seção foi criada para apoiar a leitura de volume e concentração de erros. Ela não detalha tratativas — para isso, consulte as páginas de [Integrações](integracoes.md) e [Benner](benner.md).
 
 ---
 
-## O que é este painel
+## Para que serve este painel
 
-O painel é usado como apoio operacional para indicar:
+O painel ajuda a:
 
-- onde há maior volume de erro
-- quais tipos de incidente estão aparecendo com mais frequência
-- onde vale aprofundar análise
-
-Ele **não é o foco principal da central** e não substitui a tratativa operacional dos casos.
-
----
-
-## Como o suporte deve usar esta página
-
-O painel pode ajudar a:
-
-- perceber aumento de incidentes
-- identificar concentração de falhas
-- cruzar o volume de erro com chamados recebidos
-- apoiar a decisão de investigar Integrações, SGN ou Benner
+- identificar onde há maior concentração de falhas
+- perceber aumento de incidentes ao longo do tempo
+- cruzar o volume de erros com chamados abertos
+- apoiar a decisão de investigar um sistema específico
 
 ---
 
-## O que não esperar desta seção
+## Visão atual dos chamados abertos
 
-Esta página não foi criada para detalhar bugs ou resolver incidentes sozinha.
+| Sistema | Chamados em aberto |
+|---|---|
+| Benner | 14 |
+| Integrações | 3 |
+| WSO2 / DevOps | 1 |
+| Total | 18 |
 
-Ela serve mais como:
-
-- visão de apoio
-- indicação de volume
-- ponto de observação
-
-A tratativa em si continua concentrada em:
-
-- [Tratativa de Chamados no SGN](fluxo-tratativa.md)
-- [Integrações](integracoes.md)
-- [Benner](benner.md)
-- [Direcionamento e Escalonamento](direcionamento.md)
+Para ver o detalhe de cada chamado, acesse [Chamados abertos](chamados.md).
 
 ---
 
-## Evolução futura
+## Erros com maior frequência histórica
 
-Se a equipe começar a usar o painel como apoio mais frequente, esta seção pode receber orientações mais específicas de leitura e interpretação.
+| Problema | Chamados acumulados |
+|---|---|
+| Tabela DependenciasPAISES | 7 |
+| Duplicidade de CPF/CNPJ | 4 |
+| Out of Memory | 4 |
+| Documento duplicado no primeiro envio | 2 |
 
 ---
 
-*Seção reposicionada como apoio de monitoramento, não como frente principal da operação.*
+## Como esta página deve evoluir
+
+À medida que a base for alimentada, esta seção pode receber orientações mais específicas de leitura e interpretação. Por enquanto, os dados acima servem como ponto de partida para acompanhamento da equipe e da gestão.
+
+Se a equipe começar a registrar erros com frequência e data, será possível montar uma visão de volume por período — útil para reuniões com liderança.
+
+---
+
+*Última revisão: Abril 2026*

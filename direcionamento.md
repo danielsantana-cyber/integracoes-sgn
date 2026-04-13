@@ -1,103 +1,80 @@
-# Direcionamento e Escalonamento
+# Direcionamento e escalonamento
 
->Esta página ajuda o suporte a decidir para qual equipe um caso deve ser direcionado quando não puder ser resolvido no atendimento inicial.
-
----
-
-## Objetivo desta página
-
-Evitar escalonamento incorreto e reduzir retrabalho.
-
-O foco aqui é responder:
-- quando o caso ainda é do suporte
-- quando deve ir para GECON
-- quando deve ir para GETIC
-- quando deve ir para devs
+Esta página ajuda a decidir para qual equipe um caso deve ser encaminhado quando não puder ser resolvido no suporte.
 
 ---
 
-## Regra geral
+## Antes de escalar
 
-Antes de escalar, o suporte deve sempre validar:
+Verifique:
 
-1. contexto do erro
-2. sistema envolvido
-3. mensagem de erro
-4. evidências mínimas
-5. se o caso já possui tratativa documentada
+1. O contexto do erro — em qual sistema e em qual fluxo aconteceu
+2. A mensagem exata de erro, se houver
+3. Se o caso já tem tratativa documentada em [Integrações](integracoes.md) ou [Benner](benner.md)
+4. Se já existe chamado aberto para o mesmo problema em [Chamados abertos](chamados.md)
+
+Só escale depois de validar esses quatro pontos.
 
 ---
 
-## Quando direcionar para GECON
+## Quando encaminhar para GECON
 
-Use este direcionamento quando o caso envolver principalmente:
+Use esse direcionamento quando o caso envolver principalmente:
 
-- regra de negócio
-- entendimento operacional do processo
-- fluxo funcional do sistema
-- validação de procedimento da área
+- regra de negócio ou processo que a equipe financeira precisa validar
+- configurações no Benner que dependem da área financeira (contas, centros de custo, boletos)
+- cadastros de produto, filial ou vínculos que precisam ser completados
 - dúvida sobre como o processo deveria funcionar
 
-> AGECOM tende a entrar quando a questão está mais ligada ao funcionamento esperado do processo do que a erro técnico puro.
-
----
-
-## Quando direcionar para GETIC
-
-Use este direcionamento quando o caso envolver principalmente:
-
-- falha técnica de ambiente
-- indisponibilidade
-- erro de infraestrutura
-- integração travada sem indício funcional
-- problema sistêmico que afeta mais de um usuário ou operação
-
-> GTIC tende a entrar quando o comportamento aponta para algo mais técnico, estrutural ou sistêmico.
-
----
-
-## Quando direcionar para devs
-
-Use este direcionamento quando houver indício de:
-
-- bug de sistema
-- comportamento incoerente da aplicação
-- erro reproduzível sem tratativa conhecida
-- falha específica do fluxo implementado
-- necessidade de correção de código ou ajuste estrutural
-
-> O suporte deve evitar acionar devs sem contexto claro ou sem evidência mínima.
-
----
-
-## Como pensar rapidamente no direcionamento
-
-| Situação predominante | Direcionamento provável |
+| Tipo de problema | Contato |
 |---|---|
-| Dúvida de processo / regra / fluxo esperado | GECON |
-| Erro técnico de ambiente / indisponibilidade / infraestrutura | GETIC |
-| Bug, comportamento inconsistente ou ajuste de sistema | Devs |
+| Configurações financeiras no Benner | carolini.silveira@fiesc.com.br, marcos@fiesc.com.br |
+| Cadastros de produto e filial | otavio.l.santos@fiesc.com.br, jackson.faria@fiesc.com.br, silvana.tkaczuk@fiesc.com.br |
 
 ---
 
-## O que deve acompanhar qualquer escalonamento
+## Quando encaminhar para GETIC
 
-Sempre enviar junto:
+Use esse direcionamento quando o caso envolver principalmente:
 
-- número do chamado
-- descrição objetiva do problema
-- sistema afetado
-- mensagem de erro
-- evidência visual
-- contexto validado pelo suporte
-- o que já foi tentado antes do envio
+- falha técnica de ambiente ou infraestrutura
+- integração interrompida sem causa funcional identificada
+- erro sistêmico que afeta mais de um usuário ou operação
+- problemas no Benner que não dependem de configuração da área de negócio
 
 ---
 
-## Observação importante
+## Quando encaminhar para DevOps
 
-Os critérios exatos de cada equipe devem ser refinados com a operação real. Esta página representa a estrutura-base para padronizar o raciocínio do suporte.
+Use esse direcionamento quando houver:
+
+- problema de permissão em API (WSO2)
+- comportamento de sistema que parece ser bug
+- falha específica de fluxo que já foi descartada como configuração ou regra de negócio
 
 ---
 
-*Página de apoio à decisão de escalonamento da equipe de suporte.*
+## Tabela de decisão rápida
+
+| Situação | Direcionamento |
+|---|---|
+| Configuração financeira, regra de negócio, cadastro incompleto | GECON |
+| Falha técnica, infraestrutura, integração interrompida | GETIC |
+| Permissão de API, bug de sistema | DevOps |
+
+---
+
+## O que enviar junto em qualquer escalonamento
+
+- Número do chamado
+- Descrição objetiva do problema em no máximo duas linhas
+- Sistema afetado
+- Mensagem exata do erro
+- Print ou evidência visual
+- O que já foi validado ou tentado pelo suporte
+
+Quanto mais organizado chegar o escalonamento, mais rápido a equipe de destino consegue atuar.
+
+---
+
+*Última revisão: Abril 2026*

@@ -1,108 +1,89 @@
-# Como Alimentar a Base
+# Como registrar novos casos
 
-> 📌 Esta página orienta como a equipe pode manter a Central de Conhecimento atualizada sem perder padrão, clareza e confiabilidade.
-
----
-
-## Quando registrar um novo caso
-
-Registre um novo caso quando houver pelo menos um destes cenários:
-
-- erro recorrente no suporte
-- tratativa validada que pode ajudar outras pessoas
-- fluxo de acesso ou processo que precisa ficar documentado
-- caso que gera dúvida frequente na equipe
-- situação que costuma ser escalada de forma repetida
+Esta página orienta como manter a base atualizada sem perder consistência, clareza e confiabilidade.
 
 ---
 
-## O que deve entrar em um registro
+## Quando registrar
 
-Todo novo caso deve responder, no mínimo:
+Registre um novo caso quando:
 
-- **o que aconteceu**
-- **em que contexto aconteceu**
-- **qual a causa identificada**
-- **qual foi a solução aplicada**
-- **quando escalar e para qual área**
+- o erro se repete com frequência
+- a tratativa foi validada e pode ajudar outras pessoas
+- o fluxo ou processo precisa ficar documentado
+- a situação gera dúvida recorrente na equipe
+- o escalonamento para o mesmo problema se repete
 
-Se alguma informação ainda não estiver confirmada, registre isso de forma transparente.
+---
 
-Exemplo:
+## O que todo registro precisa ter
+
+- O que aconteceu
+- Em que contexto aconteceu
+- Qual a causa identificada (se ainda não confirmada, diga isso explicitamente)
+- Qual foi a solução aplicada
+- Quando escalar e para qual área
+
+Se alguma informação não estiver confirmada, registre da seguinte forma:
 > Causa em análise — padrão ainda não confirmado pela equipe.
 
 ---
 
-## Padrão obrigatório
+## Estrutura obrigatória
 
-Use sempre a mesma estrutura:
+```markdown
+## Título descritivo do erro
 
-1. Título objetivo do erro
-2. Contexto
-3. Causa
-4. Solução passo a passo
-5. Atenção
-6. Escalonamento
+**Mensagem:**
 
-O modelo completo está em [Modelo de Novo Caso](modelo-de-registro.md).
+MENSAGEM EXATA DO ERRO
+
+**Causa:** Explicação do motivo.
+
+**O que fazer:**
+1. Passo 1
+2. Passo 2
+
+**Atenção:** Observações relevantes.
+
+**Encaminhar para:** GECON / GETIC / DevOps — com informações adicionais.
+```
+
+O modelo completo está em [Modelo de novo caso](modelo-de-registro.md).
 
 ---
 
-## Fluxo simples de atualização
+## Fluxo de atualização
 
-1. Identificar o novo caso relevante
+1. Identificar o caso que merece registro
 2. Escolher a categoria correta
-3. Registrar no padrão da central
-4. Revisar linguagem e clareza
-5. Validar se a informação está confiável
+3. Preencher o modelo padrão
+4. Revisar se o texto está claro e objetivo
+5. Confirmar se as informações são confiáveis
 6. Publicar no repositório
 
 ---
 
-## Como escolher a categoria
+## Onde cada tipo de caso vai
 
-| Situação | Página correta |
+| Tipo de caso | Página |
 |---|---|
-| API, WSO2, serviço, integração, sincronização | [Integrações](integracoes.md) |
-| ERP, faturamento, cadastro, cobrança, documento | [Benner](benner.md) |
-| Permissões, acessos, onboarding, primeiros passos | [Acessos e Primeiros Passos](acessos.md) |
-| Painéis, leitura de dados, validação de indicadores | [Dashboard](dashboard.md) |
-| Caso reincidente ou padrão que vale consolidar | [Problemas Recorrentes](problemas.md) |
-
----
-
-## Boas práticas de escrita
-
-- Escreva para leitura rápida
-- Use frases objetivas
-- Evite jargão desnecessário
-- Não publique informações “prováveis” como se fossem definitivas
-- Prefira orientar com segurança a preencher com achismos
+| API, WSO2, serviço externo, sincronização | integracoes.md |
+| ERP, faturamento, cadastro, cobrança | benner.md |
+| Permissões, acessos, onboarding | acessos.md |
+| Caso reincidente com histórico de chamados | problemas.md |
+| Novo chamado aberto | chamados.md |
 
 ---
 
 ## O que evitar
 
-- textos longos demais
-- escalonamento sem critério
-- contatos não confirmados
-- links desatualizados
-- linguagem ambígua
-- passos incompletos
+- Publicar causas prováveis como se fossem confirmadas
+- Adicionar contatos sem validação prévia
+- Textos longos demais — priorize leitura rápida
+- Escalonamento sem critério claro
+- Passos incompletos ou ambíguos
 
 ---
 
-## Objetivo final
-
-A proposta desta central não é apenas guardar informação.
-
-Ela existe para:
-
-- apoiar o atendimento
-- reduzir dependência de memória individual
-- acelerar o onboarding
-- criar uma referência confiável para a equipe
-
----
-
-*Esta página faz parte da governança da Central de Conhecimento — Suporte SGN.*
+*Última revisão: Abril 2026*
