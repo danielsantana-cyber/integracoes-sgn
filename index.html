@@ -6,7 +6,7 @@
   <title>Central de Conhecimento — Suporte SGN</title>
   <meta name="description" content="Base de conhecimento operacional — Squad Integracoes, Movimentacoes Financeiras">
 
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
@@ -127,9 +127,8 @@
       padding: 0 10px !important;
     }
 
-    .sidebar ul li a,
-    .sidebar-nav a {
-      color: rgba(255,255,255,0.80) !important;
+    .sidebar ul li a {
+      color: rgba(255,255,255,0.58) !important;
       font-size: 13px !important;
       font-weight: 400 !important;
       padding: 5px 10px !important;
@@ -139,42 +138,26 @@
       text-decoration: none !important;
     }
 
-    .sidebar ul li a:hover,
-    .sidebar-nav a:hover {
-      color: #ffffff !important;
-      background: rgba(255,255,255,0.08) !important;
-      border-radius: 6px;
+    .sidebar ul li a:hover {
+      color: rgba(255,255,255,0.9) !important;
+      background: rgba(255,255,255,0.06) !important;
     }
 
-    .sidebar ul li.active > a,
-    .sidebar-nav li.active > a {
+    .sidebar ul li.active > a {
       color: #FFFFFF !important;
-      background: rgba(255,255,255,0.14) !important;
-      border-radius: 6px;
-      font-weight: 600 !important;
+      background: rgba(255,255,255,0.1) !important;
+      font-weight: 500 !important;
     }
 
-    /* Section labels — corrigido de verdade */
-    .sidebar ul p,
-    .sidebar ul p strong,
-    .sidebar ul li p,
-    .sidebar ul li p strong,
-    .sidebar ul li strong,
-    .sidebar-nav ul p,
-    .sidebar-nav ul p strong,
-    .sidebar-nav li p,
-    .sidebar-nav li p strong,
-    .sidebar-nav li strong {
-      color: #ffffff !important;
+    /* Section labels */
+    .sidebar ul p {
+      color: rgba(255,255,255,0.75) !important;
       font-size: 10px !important;
-      font-weight: 700 !important;
-      letter-spacing: 0.1em !important;
-      text-transform: uppercase !important;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       padding: 20px 10px 5px !important;
-      margin: 0 !important;
-      opacity: 1 !important;
-      display: block !important;
-      font-family: 'Inter', -apple-system, sans-serif !important;
+      margin: 0;
     }
 
     /* ── Main content ─────────────────────────── */
@@ -393,11 +376,6 @@
       plugins: [
         function(hook) {
           hook.doneEach(function() {
-
-            // Forçar cor branca nos labels de seção da sidebar
-            document.querySelectorAll('.sidebar ul p, .sidebar ul li p, .sidebar ul li strong, .sidebar ul p strong').forEach(function(el) {
-              el.style.cssText = 'color:#FFFFFF !important; font-size:10px !important; font-weight:700 !important; letter-spacing:0.1em !important; text-transform:uppercase !important; font-family:Inter,-apple-system,sans-serif !important; padding:20px 10px 5px !important; margin:0 !important; display:block !important; opacity:1 !important;';
-            });
 
             // Footer
             var section = document.querySelector('.markdown-section');
