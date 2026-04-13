@@ -1,6 +1,6 @@
 # Central Operacional de Suporte — SGN
 
-Esta base foi construída para apoiar o dia a dia do suporte com informações concretas: o que está acontecendo, como tratar e para onde encaminhar quando necessário. O conteúdo vem da operação real da equipe.
+Esta base foi construida para apoiar o dia a dia do suporte com informacoes concretas vindas da operacao real. Cada tratativa aqui documentada foi validada com o time de desenvolvimento.
 
 ---
 
@@ -8,49 +8,65 @@ Esta base foi construída para apoiar o dia a dia do suporte com informações c
 
 Qualquer pessoa do suporte, ao consultar esta base, deve conseguir responder:
 
-- Qual é o erro ou sintoma que estou vendo?
+- Qual e o erro ou sintoma que estou vendo?
 - Existe tratativa documentada para esse caso?
-- Consigo resolver no próprio suporte ou preciso escalar?
+- Consigo resolver no proprio suporte ou preciso escalar?
 - Se precisar escalar, vai para GECON, GETIC ou devs?
-- Quais evidências preciso enviar junto?
+- Quais evidencias preciso enviar junto?
 
 ---
 
-## Onde está cada coisa
+## Onde esta cada coisa
 
-| Seção | O que você encontra |
+| Secao | O que voce encontra |
 |---|---|
-| [Primeiros acessos ao SGN](acessos.md) | Como solicitar acesso, validar permissões e iniciar a operação |
+| [Primeiros acessos ao SGN](acessos.md) | Como solicitar acesso, validar permissoes e iniciar a operacao |
 | [Tratativa de chamados no SGN](fluxo-tratativa.md) | O que fazer antes de escalar qualquer caso |
-| [Integrações](integracoes.md) | Erros técnicos entre sistemas, APIs e sincronizações |
+| [Integracoes](integracoes.md) | Erros tecnicos entre sistemas, APIs e sincronizacoes |
 | [Benner](benner.md) | Erros ligados ao ERP, faturamento, cadastros e documentos |
-| [Chamados abertos](chamados.md) | Registro de chamados em andamento e seu status atual |
+| [Erros operacionais do dia a dia](erros-operacionais.md) | Casos reais com tratativas validadas pelo time de desenvolvimento |
+| [PIX](pix.md) | Fluxo especifico de integracao de pagamentos via PIX |
+| [Unidade nao integrada](unidade-nao-integrada.md) | Processo para resolver erro de unidade sem cadastro no Benner |
+| [Como usar o Dashboard SGN](dashboard-sgn.md) | Links, abas, rotina diaria e como navegar no dashboard |
+| [Chamados abertos](chamados.md) | Registro de chamados em andamento e status atual |
 | [Direcionamento e escalonamento](direcionamento.md) | Como decidir para qual equipe encaminhar o caso |
-| [Problemas recorrentes](problemas.md) | Padrões repetidos com histórico de ocorrências |
-| [Como registrar novos casos](contribuicao.md) | Fluxo e padrão para manter a base atualizada |
+| [Problemas recorrentes](problemas.md) | Padroes repetidos com historico de ocorrencias |
+| [Como registrar novos casos](contribuicao.md) | Fluxo e padrao para manter a base atualizada |
 
 ---
 
-## Como usar na prática
+## Como usar na pratica
 
 1. Pesquise pelo erro na barra lateral ou use a busca
 2. Leia o contexto e a causa documentada
 3. Aplique a tratativa descrita
-4. Se necessário, escale com as evidências indicadas
-5. Se o erro não estiver documentado, registre seguindo o modelo padrão
+4. Se necessario, escale com as evidencias indicadas
+5. Se o erro nao estiver documentado, registre seguindo o modelo padrao
 
 ---
 
 ## Antes de escalar qualquer caso
 
-Verifique se já existe um chamado aberto para o mesmo problema na página de [Chamados abertos](chamados.md). Isso evita chamados duplicados e acelera a resolução.
+Verifique se ja existe um chamado aberto para o mesmo problema em [Chamados abertos](chamados.md). Isso evita chamados duplicados e acelera a resolucao.
 
 ---
 
 ## Para novos colaboradores
 
-Esta base substitui orientações verbais e memória individual. Antes de perguntar para alguém da equipe, consulte aqui. Se não encontrar o que precisa, é um sinal de que vale registrar.
+Esta base substitui orientacoes verbais e memoria individual. Antes de perguntar para alguem da equipe, consulte aqui. Se nao encontrar o que precisa, e um sinal de que vale registrar.
 
 ---
 
-*Versão 1.2 — Squad Integrações, Movimentações Financeiras*
+## Canais de acionamento rapido
+
+| Situacao | Canal |
+|---|---|
+| Erro tecnico do Benner, infra, API | Abrir chamado na GETIC via SeSuite |
+| Configuracao financeira, cadastro incompleto | E-mail para GECON |
+| Permissao de API, WSO2 | DevOps |
+| Desconto duplicado, parcela liquidada | Alexandre no grupo de integracoes |
+| Duvida tecnica de integracao | Grupo de integracoes no Hangouts |
+
+---
+
+*Versao 1.3 — Squad Integracoes, Movimentacoes Financeiras*

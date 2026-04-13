@@ -2,7 +2,7 @@
 
 ---
 
-**Operação**
+**Operacao**
 
 * [Primeiros acessos ao SGN](acessos.md)
 * [Tratativa de chamados no SGN](fluxo-tratativa.md)
@@ -14,6 +14,9 @@
 
 * [Integracoes](integracoes.md)
 * [Benner](benner.md)
+* [Erros operacionais do dia a dia](erros-operacionais.md)
+* [PIX](pix.md)
+* [Unidade nao integrada — Baixa Tesouraria](unidade-nao-integrada.md)
 
 ---
 
@@ -22,6 +25,12 @@
 * [Chamados abertos](chamados.md)
 * [Problemas recorrentes](problemas.md)
 * [Painel de monitoramento](dashboard.md)
+
+---
+
+**Como usar o SGN**
+
+* [Dashboard de integracoes](dashboard-sgn.md)
 
 ---
 
