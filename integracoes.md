@@ -1,153 +1,264 @@
-# Integrações — erros e tratativas
+# Integrações — Erros e Tratativas
 
-> 📌 Esta página reúne os principais erros de integração entre SGN, Benner e serviços externos, com orientação direta de tratativa e escalonamento.
+Esta página reúne os principais erros de integração entre SGN, Benner e serviços externos. Para cada erro: o que é, como tratar e para onde encaminhar se necessário.
 
-## 🧠 Como decidir rapidamente
+Antes de escalar, verifique se já existe um chamado aberto para o mesmo problema em [Chamados abertos](chamados.md).
 
-Antes de tudo, responda:
+---
 
-- Esse erro já aconteceu antes?
-- Já foi integrado?
-- É erro técnico, operacional ou de cadastro?
+## Erros tratáveis pelo suporte
 
-## 🚀 Decisão rápida
+Esses erros têm tratativa direta. O suporte resolve sem precisar acionar outra equipe.
 
-| Situação | Ação |
-|---|---|
-| Já integrado | Aprovar retorno |
-| Duplicidade | Aprovar retorno |
-| Erro transitório | Reenviar |
-| Erro técnico | GETIC |
-| Erro de cadastro / configuração funcional | GECON |
-| Permissão / API / WSO2 | DevOps |
-| Payload estranho / bug | Squad / devs |
+---
 
-## 🔴 CPF/CNPJ duplicado
+### CPF/CNPJ duplicado
 
-**Mensagem:**  
-Erro interno: Existe mais uma pessoa com este Cnpj/Cpf cadastrado no sistema.
+**Mensagem:**
+```
+Erro interno: Existe mais de uma pessoa com este Cnpj/Cpf cadastrado no sistema.
+```
 
-**Tratativa do suporte:**  
-- Se o nome estiver em negrito → usar **Forçar Reenvio**
-- Caso contrário → clicar em **Reenviar selecionados** fileciteturn2file3
+**O que fazer:**
+- Se o nome estiver em negrito na tela: usar "Forçar reenvio"
+- Se o nome não estiver em negrito: usar "Reenviar selecionados"
 
-## 🔴 Documento já existente
+---
 
-**Mensagem:**  
-Erro interno: Já existe um documento com essas informações cadastrado no sistema.
+### Documento já existe no sistema
 
-**Tratativa do suporte:**  
-- Conferir os logs
-- Clicar em **Aprovar retorno**
-- Na justificativa, informar: `Já foi integrado com sucesso` fileciteturn2file7turn3file0
+**Mensagem:**
+```
+Erro interno: Já existe um documento com essas informações cadastrado no sistema
+```
 
-## 🔴 Documento encontrado / AP / Nosso Número
+**O que fazer:**
+1. Conferir os logs da integração
+2. Clicar em "Aprovar retorno"
+3. Justificativa a usar: `Já foi integrado com sucesso`
 
-**Mensagem:**  
-Foi encontrado o documento [...] Verifique.
+---
 
-**Tratativa do suporte:**  
-- Conferir os dados
-- Clicar em **Aprovar retorno**
-- Justificativa: `Já foi integrado com sucesso` fileciteturn2file3
+### Documento já integrado (NOSSO NÚMERO)
 
-## 🔴 Baixa já processada anteriormente
+**Mensagem:**
+```
+Foi encontrado o documento...
+```
 
-**Mensagem:**  
-A requisição de baixa [...] já foi processada anteriormente.
+**O que fazer:**
+1. Conferir os dados
+2. Clicar em "Aprovar retorno"
+3. Justificativa: `Já foi integrado com sucesso`
 
-**Tratativa do suporte:**  
-- Conferir logs
-- Clicar em **Aprovar retorno**
-- Justificativa: `Já foi integrado com sucesso` fileciteturn2file3
+**Atenção:** se for o primeiro envio e o erro ainda assim aparecer, consulte os chamados TI0287291 e TI0332905 em [Chamados abertos](chamados.md) — esse comportamento está em investigação.
 
-## 🔴 Invalid variant operation
+---
 
-**Mensagem:**  
-Erro ao integrar o documento [...] Invalid variant operation
+### Baixa já processada anteriormente
 
-**Tratativa do suporte:**  
-- Se o nome estiver em negrito → usar **Forçar Reenvio**
-- Caso contrário → clicar em **Reenviar selecionados** fileciteturn2file3
+**Mensagem:**
+```
+A requisição de baixa já foi processada anteriormente
+```
 
-## 🔴 Pessoa não integrada ao Benner
+**O que fazer:**
+1. Conferir os logs
+2. Aprovar retorno
+3. Justificativa: `Já foi integrado com sucesso`
 
-**Mensagem:**  
-O cliente de documento [...] não está integrado com a Aplicação Benner.
+---
 
-**Tratativa do suporte:**  
-1. Acessar a tela de integração de pessoa
-2. Buscar pelo CPF ou nome
-3. Aplicação: Benner
-4. Situação: Todas
-5. Verificar o status do último protocolo
-6. Se necessário, reenviar a pessoa salvando o cadastro da pessoa no SGN fileciteturn3file0
+### Invalid variant operation
 
-## 🔴 DependenciasPAISES / Estado de nascimento não encontrado
+**Mensagem:**
+```
+Erro ao integrar documento... Invalid variant operation
+```
 
-**Mensagem:**  
-Erro ao integrar a pessoa: Não foi encontrado o registro na tabela DependenciasPAISES.
+**O que fazer:**
+- Nome em negrito: "Forçar reenvio"
+- Nome sem negrito: "Reenviar selecionados"
 
-**Tratativa do suporte:**  
-- Verificar se o dado enviado está válido
-- Se o dado estiver válido, tratar como problema do lado de lá
-- Abrir chamado / acionar GETIC quando necessário
-- Registrar caso recorrente porque já houve incidente de causa raiz sobre isso fileciteturn3file0turn2file5
+---
 
-## 🔴 Unidade não integrada ao Benner
+### Value cannot be null
 
-**Mensagem:**  
-Serviço de baixa tesouraria retornou status diferente de 200 [OK]: Bad Request. A unidade da cobrança não está integrada com o Benner.
+**Mensagem:**
+```
+Falha ao autorizar operação. Value cannot be null. Parameter name: key
+```
 
-**Leitura operacional:**  
-Renan explicou que, para integrar a baixa tesouraria, precisa existir `id_externo` da unidade cadastrado na base. Depois, o caso deve ser documentado com a observação de que esse `id_externo` corresponde ao campo **Código da Filial** no Benner. fileciteturn3file0
+**O que fazer:**
+1. Tentar reenviar uma vez
+2. Se persistir, abrir chamado
 
-**Direcionamento:**  
-➡️ Tratativa técnica / apoio de DBA / GETIC, conforme o fluxo validado internamente
+**Encaminhar para:** GETIC
 
-## 🔴 XML inválido / divergência entre servidores
+---
 
-**Mensagem:**  
-cvc-complex-type... Invalid content...
+## Erros que exigem escalonamento para GECON
 
-**Direcionamento:**  
-➡️ GETIC fileciteturn2file3
+---
 
-## 🔴 Resource forbidden
+### Conta financeira não preenchida
 
-**Mensagem:**  
+**Mensagem:**
+```
+FINOBJ - A conta deve ser preenchida
+```
+
+**Causa:** CR sem conta financeira configurada no Benner
+
+**Encaminhar para:** GECON
+- carolini.silveira@fiesc.com.br
+- marcos@fiesc.com.br
+
+---
+
+### Centro de custo inválido para a filial
+
+**Mensagem:**
+```
+Centro de custo inválido para a filial
+```
+
+**Encaminhar para:** GECON
+- carolini.silveira@fiesc.com.br
+- marcos@fiesc.com.br
+
+---
+
+### Filial não habilitada para faturar
+
+**Mensagem:**
+```
+Impossível faturar esta filial com o produto informado
+```
+
+**Causa:** Cadastro incompleto no Benner (vínculos, CNAE, etc.)
+
+**Encaminhar para:** GECON
+- otavio.l.santos@fiesc.com.br
+- jackson.faria@fiesc.com.br
+- silvana.tkaczuk@fiesc.com.br
+
+---
+
+### Complemento de endereço acima de 60 caracteres
+
+**Mensagem:**
+```
+O tamanho máximo do campo "Complemento" é 60 caracteres
+```
+
+**O que fazer:**
+1. Reduzir o complemento para até 60 caracteres no cadastro
+2. Reprocessar a integração
+3. Após integrar, ajustar o cadastro com o texto completo novamente
+
+Esse caso é resolvido no suporte, sem necessidade de escalonamento.
+
+---
+
+### Boleto automático não configurado
+
+**Mensagem:**
+```
+As configurações do boleto automático não foram encontradas. Verifique a operação 7151.
+```
+
+**Encaminhar para:** GECON
+- carolini.silveira@fiesc.com.br
+- marcos@fiesc.com.br
+
+Informar na abertura: operação 7151, carga "Configuração boletos automáticos".
+
+---
+
+## Erros que exigem escalonamento para GETIC
+
+---
+
+### Divergência de arquivos XML entre servidores
+
+**Mensagem:**
+```
+cvc-complex-type.2.4.d: Invalid content was found starting with element 'codigoCentroResponsabilidade'
+```
+
+**Encaminhar para:** GETIC
+Referência: TI0232055 / TI0271054
+
+---
+
+### Tabela DependenciasPAISES — estado de nascimento não encontrado
+
+**Mensagem:**
+```
+Não foi encontrado o registro na tabela DependenciasPAISES, campo de busca: ESTADONASCIMENTO
+```
+
+**Encaminhar para:** GETIC
+
+Este é o erro com maior volume de chamados na base. Ao abrir, mencione os chamados anteriores para demonstrar reincidência. Veja histórico completo em [Chamados abertos](chamados.md).
+
+---
+
+### Unidade da cobrança não integrada ao Benner
+
+**Mensagem:**
+```
+A unidade da cobrança não está integrada com o Benner. Status diferente de 200.
+```
+
+**Encaminhar para:** GETIC com o ID da cobrança e o ID da unidade informados no erro.
+
+---
+
+### Parcela já liquidada
+
+**O que fazer:**
+1. Validar o valor da movimentação e o saldo residual informado no erro
+2. Contatar Alexandre no grupo de integrações para ajuste
+3. Após confirmação do ajuste, reprocessar
+
+**Referência:** TI0310505
+
+---
+
+### Out of Memory nas integrações
+
+**Mensagem:**
+```
+Erro 'Out of memory' nas integrações com o Benner
+```
+ou
+```
+ESB-0004 - Excedeu o tempo limite de 1800000 milissegundos para integrar com o ERP
+```
+
+**Encaminhar para:** GETIC com urgência.
+
+Esse erro é recorrente. Ao abrir, mencione os chamados anteriores: TI0252965, TI0269739, TI0281296, TI0338268.
+
+---
+
+## Erros de permissão — DevOps
+
+---
+
+### Resource forbidden — acesso negado no WSO2
+
+**Mensagem:**
+```
 Resource forbidden. User is NOT authorized to access the Resource. API Subscription validation failed.
+```
 
-**Causa conhecida:**  
-Usuário no WSO2 não tem permissão para acessar o endpoint.
+**Causa:** Usuário ou aplicação sem permissão no WSO2
 
-**Direcionamento:**  
-➡️ DevOps fileciteturn2file3
+**Encaminhar para:** DevOps com o nome da API, nome da aplicação e ambiente (produção ou homologação).
 
-## 🔴 Parcela já liquidada
+---
 
-**Mensagem:**  
-Parcela já foi liquidada.
-
-**Leitura operacional:**  
-Nem sempre significa erro do suporte. Em vários casos o Renan orientou verificar se:
-- já houve protocolo anterior com sucesso
-- houve duplicação de desconto
-- o valor enviado pelo SGN está correto e o erro é do lado do Benner fileciteturn3file0
-
-**Tratativa do suporte:**  
-- validar protocolos
-- comparar valor original, valor de desconto e valor da baixa tesouraria
-- se o SGN enviou certo e o Benner retornou errado → escalar como incidente
-
-## 🔴 Janela de atualização do Benner
-
-**Leitura operacional:**  
-Em alguns dias, vários erros de retorno surgem porque o Benner atualizou e “derrubou tudo”. Nesses cenários, o Renan orientou reenviar os casos. fileciteturn3file0
-
-## 🔴 Casos sem erro visível na tela, mas falha ao reprocessar
-
-**Tratativa do suporte:**  
-Quando a tela não mostra claramente o erro e o reenvio estoura erro na própria interface, a orientação recorrente foi abrir tarefa para o squad avaliar se o problema é do nosso lado ou do lado de lá. fileciteturn3file0
-
-*Base inicial construída a partir de histórico operacional da equipe e repasses do desenvolvedor.*
+*Última revisão: Abril 2026*

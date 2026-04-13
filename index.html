@@ -1,261 +1,427 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Central Operacional — Suporte SGN</title>
-  <meta name="description" content="Central Operacional do Suporte SGN" />
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Central de Conhecimento — Suporte SGN</title>
+  <meta name="description" content="Base de conhecimento operacional — Squad Integracoes, Movimentacoes Financeiras">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
   <style>
     :root {
-      --brand: #0b57d0;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --border: #e5e7eb;
-      --bg-soft: #f8fafc;
-      --sidebar-bg: #082c6c;
-      --sidebar-bg-2: #07275f;
+      --brand-dark:     #082c6c;
+      --brand-navy:     #072d6b;
+      --brand-blue:     #0b57d0;
+      --brand-accent:   #0b57d0;
+      --brand-subtle:   #f8fafc;
+      --brand-border:   #e5e7eb;
+      --brand-text:     #1f2937;
+      --brand-muted:    #6b7280;
+      --brand-success:  #166534;
+      --brand-danger:   #991B1B;
+
+      --theme-color:           var(--brand-blue);
+      --base-font-family:      'Inter', -apple-system, sans-serif;
+      --base-font-size:        15px;
+      --base-line-height:      1.8;
+      --base-color:            var(--brand-text);
+      --base-background-color: #FFFFFF;
+
+      --sidebar-background:    var(--brand-dark);
+      --sidebar-width:         272px;
+
+      --heading-color:         var(--brand-text);
+      --link-color:            var(--brand-blue);
+      --code-font-family:      'JetBrains Mono', monospace;
+      --code-inline-color:     #1e3a8a;
+      --code-inline-background-color: #f4f8ff;
+      --code-theme-background: #072d6b;
     }
 
-    body {
-      font-family: Inter, Arial, sans-serif;
-      color: var(--text);
-    }
+    * { box-sizing: border-box; }
 
+    /* ── Sidebar ─────────────────────────────── */
     .sidebar {
-      border-right: 1px solid var(--border);
-      background: linear-gradient(180deg, var(--sidebar-bg) 0%, var(--sidebar-bg-2) 100%);
+      background: linear-gradient(180deg, #082c6c 0%, #07275f 100%) !important;
+      border-right: 1px solid var(--brand-border) !important;
     }
 
-    .app-name {
-      padding-top: 10px;
-      font-weight: 700;
-      color: #ffffff;
-      letter-spacing: .2px;
-    }
-
-    .app-name-link,
-    .app-name-link:hover {
-      color: #ffffff !important;
-      text-decoration: none;
-    }
-
-    .app-name::after {
-      content: "SUPORTE SGN · v1.2";
+    .sidebar::before {
+      content: '';
       display: block;
-      margin-top: 6px;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: .8px;
-      color: rgba(255,255,255,.72);
+      height: 3px;
+      background: linear-gradient(90deg, #0b57d0 0%, #3b82f6 100%);
     }
 
-    .search {
-      margin: 64px 16px 16px 16px;
-      padding-bottom: 8px;
-      border-bottom: 1px solid rgba(255,255,255,.18);
-      position: relative;
-    }
-
-    .search input {
-      width: 100%;
-      box-sizing: border-box;
-      border-radius: 10px;
-      border: 1px solid rgba(255,255,255,.18);
-      background: rgba(255,255,255,.1);
-      color: #ffffff;
-      padding: 10px 36px 10px 12px;
-    }
-
-    .search input::placeholder {
-      color: rgba(255,255,255,.72);
-    }
-
-    .search .clear-button {
-      color: #ffffff !important;
-    }
-
-    .search .results-panel {
-      margin-top: 12px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    .search .results-panel .matching-post {
-      border-bottom: 1px solid rgba(255,255,255,.10);
-      padding: 10px 12px;
-    }
-
-    .search .results-panel .matching-post:last-child {
-      border-bottom: none;
-    }
-
-    .search .results-panel .matching-post a {
-      color: #ffffff !important;
-      font-weight: 600;
-      text-decoration: none;
+    .sidebar .app-name {
+      padding: 24px 20px 0;
       display: block;
+    }
+
+    .sidebar .app-name-link {
+      color: #FFFFFF !important;
+      font-size: 13.5px !important;
+      font-weight: 600 !important;
+      text-decoration: none !important;
+      letter-spacing: 0.01em;
+      line-height: 1.4;
+      display: block;
+    }
+
+    .sidebar .app-name-link::after {
+      content: 'Suporte SGN  ·  v1.2';
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.28);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-top: 4px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
       margin-bottom: 4px;
     }
 
-    .search .results-panel .matching-post p {
-      margin: 0;
-      color: rgba(255,255,255,.78) !important;
+    /* Search */
+    .search {
+      padding: 12px 14px 4px !important;
+      border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+      margin-bottom: 8px !important;
+    }
+
+    .search input {
+      background: rgba(255,255,255,0.1) !important;
+      border: 1px solid rgba(255,255,255,0.18) !important;
+      border-radius: 10px !important;
+      color: #FFF !important;
+      font-family: 'Inter', sans-serif;
       font-size: 13px;
-      line-height: 1.45;
+      padding: 7px 12px 7px 32px !important;
+      width: 100% !important;
+      transition: all 0.15s;
     }
 
-    .search .results-panel em {
-      color: #93c5fd !important;
-      font-style: normal;
-      font-weight: 700;
-      background: rgba(147,197,253,.12);
-      padding: 1px 4px;
-      border-radius: 4px;
+    .search input:focus {
+      background: rgba(255,255,255,0.14) !important;
+      border-color: rgba(255,255,255,0.35) !important;
+      outline: none;
     }
 
-    .sidebar ul li a,
-    .sidebar-nav a {
-      color: #ffffff !important;
+    .search input::placeholder { color: rgba(255,255,255,0.25) !important; }
+
+    .search .results-panel {
+      background: var(--brand-navy) !important;
+      border: 1px solid rgba(255,255,255,0.08) !important;
+      border-radius: 6px !important;
     }
 
-    .sidebar-nav a:hover {
-      background: rgba(255,255,255,.1);
-      border-radius: 6px;
+    .search .matching-post { border-bottom: 1px solid rgba(255,255,255,0.06) !important; }
+    .search .matching-post a { color: rgba(255,255,255,0.85) !important; font-size: 13px; }
+    .search .matching-post p { color: rgba(255,255,255,0.4) !important; font-size: 12px; }
+
+    /* Nav items */
+    .sidebar ul {
+      padding: 0 10px !important;
     }
 
-    .sidebar-nav li.active > a {
-      background: rgba(255,255,255,.14);
-      border-radius: 6px;
-      font-weight: 700;
-    }
-
-    .sidebar-nav > ul > li > p,
-    .sidebar-nav > ul > li > strong,
-    .sidebar-nav > ul > li > em,
-    .sidebar-nav > ul > li > span,
-    .sidebar-nav li p,
-    .sidebar-nav li strong {
-      color: #ffffff !important;
-      font-weight: 700 !important;
-      opacity: 1 !important;
-      margin: 0;
-      padding: 6px 0;
+    .sidebar ul li a {
+      color: rgba(255,255,255,0.58) !important;
+      font-size: 13px !important;
+      font-weight: 400 !important;
+      padding: 5px 10px !important;
+      border-radius: 5px;
       display: block;
+      transition: all 0.12s;
+      text-decoration: none !important;
     }
 
-    .sidebar-nav ul {
-      margin: 0;
-      padding-left: 0;
+    .sidebar ul li a:hover {
+      color: rgba(255,255,255,0.9) !important;
+      background: rgba(255,255,255,0.06) !important;
     }
 
-    .sidebar-nav li {
-      margin: 0;
+    .sidebar ul li.active > a {
+      color: #FFFFFF !important;
+      background: rgba(255,255,255,0.1) !important;
+      font-weight: 500 !important;
     }
 
-    .sidebar-toggle {
-      top: 12px !important;
-      left: 12px !important;
-      bottom: auto !important;
-      background: rgba(255,255,255,.92) !important;
-      border-radius: 8px !important;
-      width: 42px;
-      height: 42px;
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,.12);
-      z-index: 9999 !important;
+    /* Section labels — CSS fallback */
+    .sidebar ul p,
+    .sidebar ul p strong,
+    .sidebar ul li p,
+    .sidebar ul li p strong,
+    .sidebar-nav ul p,
+    .sidebar-nav ul p strong {
+      color: #FFFFFF !important;
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.1em !important;
+      text-transform: uppercase !important;
+      font-family: 'Inter', -apple-system, sans-serif !important;
+      padding: 20px 10px 5px !important;
+      margin: 0 !important;
+      display: block !important;
     }
 
-    .sidebar-toggle span {
-      background-color: var(--brand) !important;
-    }
-
+    /* ── Main content ─────────────────────────── */
     .content {
-      padding-top: 12px;
+      padding: 48px 60px !important;
+      max-width: 840px;
     }
 
-    .markdown-section {
-      max-width: 920px;
-      padding: 36px 42px 60px;
+    /* ── Headings ─────────────────────────────── */
+    h1 {
+      font-size: 1.65rem !important;
+      font-weight: 700 !important;
+      color: var(--brand-text) !important;
+      letter-spacing: -0.025em;
+      border-bottom: 1px solid var(--brand-border) !important;
+      padding-bottom: 18px !important;
+      margin-bottom: 6px !important;
     }
 
-    .markdown-section h1 {
-      text-align: left;
-      font-size: 2rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 10px;
-      margin-bottom: 18px;
-      color: #183b63;
+    h2 {
+      font-size: 1.05rem !important;
+      font-weight: 600 !important;
+      color: var(--brand-text) !important;
+      margin-top: 48px !important;
+      padding: 11px 16px !important;
+      background: var(--brand-subtle);
+      border-left: 4px solid #0b57d0;
+      border-radius: 0 6px 6px 0;
+      letter-spacing: -0.01em;
     }
 
-    .markdown-section h2 {
-      border-left: 4px solid var(--brand);
-      padding-left: 10px;
-      margin-top: 28px;
-      color: #24476d;
+    h3 {
+      font-size: 0.82rem !important;
+      font-weight: 600 !important;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--brand-muted) !important;
+      margin-top: 32px !important;
+      margin-bottom: 8px !important;
     }
 
-    .markdown-section blockquote {
-      border-left: 4px solid var(--brand);
-      background: #f4f8ff;
-      padding: 10px 14px;
-      border-radius: 8px;
-      color: #243b53;
+    /* ── Paragraphs ──────────────────────────── */
+    p {
+      color: #2D3748;
+      line-height: 1.8;
     }
 
-    .markdown-section table {
-      display: table;
-      width: 100%;
+    /* ── Blockquote ──────────────────────────── */
+    blockquote {
+      background: #f4f8ff !important;
+      border-left: 4px solid #0b57d0 !important;
+      border-radius: 0 6px 6px 0;
+      padding: 12px 18px !important;
+      margin: 0 0 20px 0 !important;
+      color: #243b53 !important;
+      font-size: 14px;
+    }
+
+    blockquote p { margin: 0 !important; color: #243b53 !important; }
+
+    /* ── Code ─────────────────────────────────── */
+    pre {
+      background: #072d6b !important;
+      border-radius: 8px !important;
+      padding: 18px 22px !important;
+      margin: 12px 0 !important;
+    }
+
+    pre code {
+      font-family: 'JetBrains Mono', monospace !important;
+      font-size: 13px !important;
+      color: #93c5fd !important;
+      line-height: 1.65;
+    }
+
+    code {
+      font-family: 'JetBrains Mono', monospace !important;
+      background: #f4f8ff !important;
+      color: #1e3a8a !important;
+      padding: 2px 6px !important;
+      border-radius: 3px !important;
+      font-size: 13px !important;
+    }
+
+    /* ── Tables ──────────────────────────────── */
+    table {
       border-collapse: collapse;
-      margin: 18px 0;
+      width: 100%;
+      margin: 16px 0 !important;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--brand-border);
+      font-size: 14px;
     }
 
-    .markdown-section th,
-    .markdown-section td {
-      border: 1px solid var(--border);
-      padding: 10px 12px;
-      text-align: left;
+    thead tr { background: #082c6c !important; }
+
+    thead th {
+      color: #FFFFFF !important;
+      font-size: 11px !important;
+      font-weight: 600 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.07em !important;
+      padding: 11px 16px !important;
     }
 
-    .markdown-section th {
-      background: var(--bg-soft);
+    tbody tr:nth-child(odd)  { background: #f8fafc; }
+    tbody tr:nth-child(even) { background: #FFFFFF; }
+    tbody tr:hover           { background: #eef2ff !important; transition: background 0.1s; }
+
+    tbody td {
+      padding: 9px 16px !important;
+      font-size: 13.5px !important;
+      border-bottom: 1px solid var(--brand-border) !important;
+      color: var(--brand-text);
     }
 
-    .markdown-section code:not([class*=lang-]) {
-      background: #eef2ff;
-      color: #1e3a8a;
-      padding: 2px 6px;
-      border-radius: 6px;
+    /* ── HR ──────────────────────────────────── */
+    hr {
+      border: none !important;
+      border-top: 1px solid var(--brand-border) !important;
+      margin: 32px 0 !important;
     }
 
-    .footer-note { display: none !important; }
+    /* ── Lists ────────────────────────────────── */
+    .markdown-section ol li,
+    .markdown-section ul li {
+      padding: 3px 0;
+      font-size: 14.5px;
+      color: var(--brand-text);
+      line-height: 1.75;
+    }
 
+    /* ── Progress bar ────────────────────────── */
+    #nprogress .bar {
+      background: #0b57d0 !important;
+      height: 2px !important;
+    }
+
+    /* ── Footer ──────────────────────────────── */
+    .ck-footer {
+      margin-top: 64px;
+      padding-top: 20px;
+      border-top: 1px solid var(--brand-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11.5px;
+      color: var(--brand-muted);
+    }
+
+    /* ── Status badges ───────────────────────── */
+    .badge-open {
+      background: #FEF2F2;
+      color: #991B1B;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    .badge-done {
+      background: #F0FDF4;
+      color: #166534;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 11.5px;
+      font-weight: 500;
+    }
+
+    /* ── Sidebar toggle ──────────────────────── */
+    .sidebar-toggle {
+      background: #0b57d0 !important;
+      border-radius: 0 5px 5px 0 !important;
+    }
+
+    /* ── Responsive ──────────────────────────── */
     @media (max-width: 768px) {
-      .search { margin-top: 64px; }
-      .markdown-section { padding: 24px 18px 40px; }
+      .content { padding: 28px 22px !important; }
+      h2 { padding: 10px 14px !important; }
     }
   </style>
 </head>
 <body>
-  <div id="app">Carregando a Central Operacional...</div>
+  <div id="app">
+    <div style="display:flex;align-items:center;justify-content:center;height:100vh;flex-direction:column;background:linear-gradient(180deg,#082c6c 0%,#07275f 100%);gap:14px;">
+      <div style="color:#FFFFFF;font-size:15px;font-weight:600;letter-spacing:-0.01em;">Central de Conhecimento</div>
+      <div style="color:rgba(255,255,255,0.3);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;">Suporte SGN</div>
+      <div style="margin-top:8px;width:32px;height:32px;border:2px solid rgba(255,255,255,0.15);border-top-color:#93c5fd;border-radius:50%;animation:spin 0.7s linear infinite;"></div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+
   <script>
     window.$docsify = {
       name: 'Central de Conhecimento',
+      nameLink: 'home.md',
+      repo: '',
+      loadSidebar: true,
+      subMaxLevel: 1,
+      auto2top: true,
       homepage: 'home.md',
-      loadSidebar: '_sidebar.md',
-      subMaxLevel: 2,
+      notFoundPage: true,
+
       search: {
-        placeholder: 'Buscar erro, sistema ou sintoma',
-        noData: 'Nenhum resultado encontrado',
-        depth: 3
-      }
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Buscar erros, causas, chamados...',
+        noData: 'Nenhum resultado encontrado.',
+        depth: 4,
+      },
+
+      plugins: [
+        function(hook) {
+          hook.doneEach(function() {
+
+            // Forcar cor branca nos labels de secao da sidebar
+            document.querySelectorAll('.sidebar ul p, .sidebar ul li p').forEach(function(el) {
+              el.style.cssText = 'color:#FFFFFF !important; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:Inter,-apple-system,sans-serif; padding:20px 10px 5px; margin:0; display:block;';
+              var strong = el.querySelector('strong');
+              if (strong) {
+                strong.style.cssText = 'color:#FFFFFF !important; font-size:10px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; font-family:Inter,-apple-system,sans-serif;';
+              }
+            });
+
+            // Footer
+            var section = document.querySelector('.markdown-section');
+            if (section && !section.querySelector('.ck-footer')) {
+              var footer = document.createElement('div');
+              footer.className = 'ck-footer';
+              footer.innerHTML = '<span>Central de Conhecimento · Suporte SGN</span><span>Squad Integracoes · Movimentacoes Financeiras</span>';
+              section.appendChild(footer);
+            }
+
+            // Status badges in tables
+            document.querySelectorAll('tbody td').forEach(function(td) {
+              var text = td.textContent.trim();
+              if (text === 'Em aberto') {
+                td.innerHTML = '<span class="badge-open">Em aberto</span>';
+              } else if (text === 'Concluido' || text === 'Concluído') {
+                td.innerHTML = '<span class="badge-done">Concluido</span>';
+              }
+            });
+          });
+        }
+      ]
     };
   </script>
-  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
 </body>
 </html>

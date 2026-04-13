@@ -1,58 +1,72 @@
 # Tratativa de chamados no SGN
 
-> 📌 Fluxo inicial que o suporte deve seguir ao receber um chamado ou incidente relacionado ao SGN.
+Esta página orienta o que fazer ao receber um chamado ou incidente. Seguir esse fluxo antes de escalar reduz erros de direcionamento e acelera a resolução.
 
-## 🧭 Fluxo real do suporte
+---
 
-1. Receber chamado
-2. Identificar erro, sintoma ou contexto
-3. Validar:
-   - logs
-   - histórico
-   - status de integração
-   - protocolos
-4. Classificar:
-   - resolvível → tratar
-   - já resolvido → aprovar retorno
-   - erro transitório → reenviar
-   - erro técnico → escalar
-5. Executar ação
-6. Registrar evidência
+## Fluxo inicial recomendado
 
-## Validação inicial antes de escalar
+Ao receber um chamado, siga essa ordem:
 
-Antes de encaminhar qualquer caso, validar:
+1. Identifique o erro, sintoma ou comportamento relatado
+2. Entenda em qual contexto ele acontece — qual sistema, qual fluxo, qual usuário
+3. Faça a validação básica antes de qualquer ação
+4. Verifique se existe tratativa documentada nesta base
+5. Aplique a tratativa, se possível
+6. Escale apenas se o caso realmente exigir
 
-- empresa, unidade ou contexto afetado
-- tela ou processo em que o erro ocorre
-- mensagem exata do erro
-- se o problema é recorrente ou pontual
-- se envolve apenas SGN ou também Integrações / Benner
-- se já existe tratativa documentada nesta central
+---
 
-## Quando NÃO escalar
+## O que validar antes de agir
 
-- erro já tratado na base
-- erro duplicado
-- já integrado com sucesso
-- problema simples de cadastro
-- caso que ainda depende de validação básica
+- Empresa, usuário ou contexto afetado
+- Tela ou fluxo onde o erro acontece
+- Mensagem exata do erro
+- Se o problema é pontual ou se outros usuários também estão sendo afetados
+- Se envolve apenas o SGN ou também Integrações e Benner
+- Se já existe caso semelhante documentado nesta base
 
-👉 Nesses casos, normalmente a ação será:
-- aprovar retorno
-- reenviar
-- forçar reenvio
-- validar novamente o protocolo
+---
 
-## Evidências mínimas para escalonamento
+## O que o suporte deve tentar resolver antes de escalar
 
-Sempre que o caso realmente precisar subir, enviar:
+- Confirmar se o fluxo que o usuário usou está correto
+- Verificar se o usuário tem o acesso necessário para aquela operação
+- Confirmar se o cadastro ou dado base está consistente
+- Comparar com tratativas já registradas na base
 
-- número do chamado
-- sistema afetado
-- mensagem exata do erro
-- print ou evidência visual
-- número do documento, quando existir
-- o que já foi validado pelo suporte
+---
 
-*Guia operacional inicial da equipe de suporte no SGN.*
+## Quando não escalar imediatamente
+
+Não escale antes de validar:
+
+- o contexto do chamado
+- o acesso do usuário
+- a mensagem de erro
+- se existe tratativa já documentada
+
+---
+
+## O que enviar quando for necessário escalar
+
+- Número do chamado
+- Empresa, unidade ou contexto afetado
+- Tela ou funcionalidade envolvida
+- Mensagem exata do erro
+- Print ou evidência visual
+- Horário aproximado da ocorrência
+- O que já foi validado pelo suporte
+
+---
+
+## Como este fluxo se conecta com o restante da base
+
+- Erro técnico entre sistemas: vá para [Integrações](integracoes.md)
+- Erro ligado ao ERP: vá para [Benner](benner.md)
+- Dúvida sobre para quem encaminhar: vá para [Direcionamento e escalonamento](direcionamento.md)
+- Verificar se já existe chamado aberto: vá para [Chamados abertos](chamados.md)
+
+---
+
+*Última revisão: Abril 2026*
