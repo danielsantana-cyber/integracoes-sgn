@@ -1,21 +1,21 @@
-# Painel de acompanhamento
+# Painel de Monitoramento
 
-Esta página foi criada para dar uma leitura rápida de volume, recorrência e concentração de falhas. Ela não substitui as tratativas; o papel aqui é apoiar acompanhamento da operação e visão gerencial.
-
----
-
-## Para que serve
-
-Use este painel para:
-
-- identificar onde há mais concentração de chamados;
-- entender quais erros mais se repetem;
-- apoiar conversas com liderança e áreas parceiras;
-- mostrar quando um problema deixou de ser pontual e virou recorrência.
+Esta seção foi criada para apoiar a leitura de volume e concentração de erros. Ela não detalha tratativas — para isso, consulte as páginas de [Integrações](integracoes.md) e [Benner](benner.md).
 
 ---
 
-## Visão atual dos chamados em aberto
+## Para que serve este painel
+
+O painel ajuda a:
+
+- identificar onde há maior concentração de falhas
+- perceber aumento de incidentes ao longo do tempo
+- cruzar o volume de erros com chamados abertos
+- apoiar a decisão de investigar um sistema específico
+
+---
+
+## Visão atual dos chamados abertos
 
 | Sistema | Chamados em aberto |
 |---|---|
@@ -24,7 +24,7 @@ Use este painel para:
 | WSO2 / DevOps | 1 |
 | Total | 18 |
 
-Para o detalhe de cada caso, consulte [Chamados abertos](chamados.md).
+Para ver o detalhe de cada chamado, acesse [Chamados abertos](chamados.md).
 
 ---
 
@@ -39,18 +39,12 @@ Para o detalhe de cada caso, consulte [Chamados abertos](chamados.md).
 
 ---
 
-## Como ler esses números
+## Como esta página deve evoluir
 
-Quando um erro aparece repetidamente em chamados diferentes, ele deixa de ser exceção operacional e passa a merecer visibilidade maior. Esse tipo de histórico ajuda a justificar prioridade, reforço de escalonamento e cobrança por solução estrutural.
+À medida que a base for alimentada, esta seção pode receber orientações mais específicas de leitura e interpretação. Por enquanto, os dados acima servem como ponto de partida para acompanhamento da equipe e da gestão.
 
-O painel também ajuda a separar o que é caso isolado do que já virou padrão da operação.
-
----
-
-## Próximos passos recomendados para evolução
-
-Se a equipe começar a registrar data, origem e tipo de erro com mais consistência, esta página pode evoluir para uma visão mensal de volume e tendência. Isso é útil para reuniões com liderança, revisão de gargalos e acompanhamento de reincidência.
+Se a equipe começar a registrar erros com frequência e data, será possível montar uma visão de volume por período — útil para reuniões com liderança.
 
 ---
 
-*Última revisão: Abril de 2026* 
+*Última revisão: Abril 2026*

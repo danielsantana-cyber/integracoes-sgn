@@ -1,15 +1,15 @@
 # Chamados abertos
 
-Antes de abrir um novo chamado, consulte esta página. Se o problema já estiver registrado, use o número existente como referência no seu escalonamento. Isso evita duplicidade e ajuda a mostrar o impacto real do problema.
+Antes de abrir um novo chamado, consulte esta página. Se o problema que você está atendendo já tem um chamado registrado, referencie o número existente ao invés de criar um duplicado. Isso agiliza a resolução e dá mais visibilidade ao volume real de impacto.
 
 ---
 
 ## Como usar esta página
 
-- Pesquise pelo erro, sintoma ou palavra-chave usando Ctrl + F.
-- Se encontrar um chamado compatível, reaproveite a referência.
-- Se o problema for novo, abra o chamado e registre aqui em seguida.
-- Quando o caso for concluído, atualize o status ou mova para a referência histórica.
+- Pesquise pelo erro ou palavra-chave usando Ctrl+F
+- Se encontrar um chamado com o mesmo problema, mencione o número no seu escalonamento
+- Se o problema for novo, abra o chamado e registre aqui após a abertura
+- Atualize o status quando o chamado for concluído
 
 ---
 
@@ -37,7 +37,9 @@ Antes de abrir um novo chamado, consulte esta página. Se o problema já estiver
 
 ---
 
-## Chamados concluídos que ainda servem de referência
+## Chamados concluídos — referência
+
+Chamados encerrados que podem servir de referência para casos semelhantes.
 
 | Chamado | Problema | Encerrado em |
 |---|---|---|
@@ -47,7 +49,7 @@ Antes de abrir um novo chamado, consulte esta página. Se o problema já estiver
 | TI0302721 | Tabela DependenciasPAISES | 16/10/2025 |
 | TI0294054 | Timeout ESB — excedeu 1800000ms | 11/09/2025 |
 | TI0293893 | Value cannot be null — falha ao autorizar operação | 10/09/2025 |
-| TI0291818 | Pessoa integrada, mas Benner retorna "não existe" | 03/09/2025 |
+| TI0291818 | Pessoa integrada mas Benner retorna "não existe" | 03/09/2025 |
 | TI0291201 | Filtro flParCancelada sem funcionamento no MovimentacaoFinanceiraV2 | 01/09/2025 |
 | TI0281296 | Out of Memory nas integrações | 22/07/2025 |
 | TI0271054 | Erro ao integrar faturamento RPC no Benner | 11/06/2025 |
@@ -55,16 +57,18 @@ Antes de abrir um novo chamado, consulte esta página. Se o problema já estiver
 
 ---
 
-## Quando registrar um novo chamado aqui
+## Como registrar um novo chamado nesta página
 
-Atualize esta página sempre que:
+Ao abrir um chamado no sistema, adicione uma linha na tabela "Chamados em aberto" com:
 
-- um problema novo precisar ser escalado;
-- um erro recorrente ganhar novo número de chamado;
-- um chamado antigo for concluído e deixar de estar ativo.
+- Número do chamado
+- Descrição objetiva do problema (máximo uma linha)
+- Sistema afetado
+- Data de abertura
+- Equipe responsável (GETIC, GECON, DevOps)
 
-Manter esta lista viva evita chamados duplicados e ajuda a equipe a perceber quais problemas já estão em investigação.
+Quando o chamado for concluído, mova a linha para a tabela de referência e registre a data de encerramento.
 
 ---
 
-*Última revisão: Abril de 2026* 
+*Esta página deve ser mantida atualizada pela equipe. Um chamado desatualizado aqui gera confusão e chamados duplicados.*

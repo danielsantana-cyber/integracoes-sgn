@@ -1,41 +1,37 @@
-# Modelo de registro
+# Modelo de novo caso
 
-Use este modelo sempre que for documentar um novo erro, processo ou tratativa. A ideia é manter a base padronizada sem deixar o texto duro demais.
+Use este modelo sempre que precisar registrar um novo erro, processo ou tratativa na base.
 
 ---
 
-## Estrutura recomendada
+## Template padrão
 
 ```markdown
-## Título claro do caso
+## Título descritivo do erro
 
 **Mensagem:**
-Mensagem exata do erro, quando existir.
 
-**Quando acontece:**
-Explique em que fluxo isso aparece e qual é o contexto do caso.
+MENSAGEM EXATA DO ERRO (se houver)
 
-**Como identificar:**
-Diga o que o suporte precisa observar antes de agir.
+**Contexto:**
+Descreva em que cenário o erro acontece. Qual sistema, qual fluxo, qual ação do usuário.
 
 **Causa:**
-Explique a causa confirmada.
+Explique a causa identificada.
 Se ainda não estiver validada, escreva:
-Causa em análise — padrão ainda não confirmado.
+"Causa em análise — padrão ainda não confirmado."
 
 **O que fazer:**
-1. Primeiro passo.
-2. Segundo passo.
-3. Terceiro passo.
+1. Primeiro passo
+2. Segundo passo
+3. Terceiro passo
 
 **Atenção:**
-Liste o que pode gerar erro de análise, retrabalho ou exceção.
+Inclua alertas, limitações ou situações em que a tratativa não se aplica.
 
-**Quando escalar:**
-Explique quando o caso sai da alçada do suporte e para qual área ele deve ir.
-
-**Referências:**
-Inclua chamados anteriores, links ou páginas relacionadas quando isso ajudar.
+**Encaminhar para:**
+Indique quando escalar e para qual área — GECON, GETIC ou DevOps.
+Inclua referência de chamados anteriores se houver.
 ```
 
 ---
@@ -46,43 +42,38 @@ Inclua chamados anteriores, links ou páginas relacionadas quando isso ajudar.
 ## Conta financeira não configurada no Benner
 
 **Mensagem:**
+
 FINOBJ - Validação das contas financeiras: A conta deve ser preenchida!
 
-**Quando acontece:**
-O erro aparece ao tentar integrar um lançamento financeiro que depende de conta associada ao CR.
-
-**Como identificar:**
-Abra o protocolo, localize o CR no lançamento e confirme que o erro está relacionado à validação financeira.
+**Contexto:**
+Ocorre ao tentar integrar lançamentos financeiros. O sistema rejeita a integração por falta de conta financeira no CR.
 
 **Causa:**
-O CR não possui conta financeira configurada no Benner.
+O CR (Centro de Responsabilidade) não tem conta financeira configurada no Benner.
 
 **O que fazer:**
-1. Identificar o CR associado ao lançamento.
-2. Registrar o contexto do caso.
-3. Encaminhar para GECON com o CR e a evidência do erro.
+1. Identificar o CR associado ao lançamento com erro
+2. Verificar no Benner se o CR possui conta financeira cadastrada
+3. Encaminhar para GECON com o nome do CR
 
 **Atenção:**
-Não tente tratar isso como erro técnico de integração. O ajuste depende da área financeira.
+Não altere a configuração do CR sem envolver a GECON. Alterações incorretas podem impactar outros lançamentos vinculados.
 
-**Quando escalar:**
-Escalar para GECON assim que o CR estiver identificado.
-
-**Referências:**
-Direcionamento e escalonamento, Erros do Benner.
+**Encaminhar para:**
+GECON — carolini.silveira@fiesc.com.br / marcos@fiesc.com.br
 ```
 
 ---
 
 ## Checklist antes de publicar
 
-- O título está objetivo?
-- Quem não viveu o caso vai entender o contexto?
-- A causa está validada ou sinalizada como ainda em análise?
-- Os passos estão curtos e seguros?
-- Está claro quando o suporte resolve e quando deve escalar?
-- Existe alguma referência útil que vale citar?
+- O título está claro e descreve o erro de forma objetiva?
+- O contexto está compreensível para alguém que não viveu o caso?
+- A causa está validada ou sinalizada como "em análise"?
+- A solução está em passos simples e ordenados?
+- O escalonamento está preciso — para qual área e quando?
+- O texto está curto o suficiente para leitura rápida?
 
 ---
 
-*Última revisão: Abril de 2026* 
+*Última revisão: Abril 2026*

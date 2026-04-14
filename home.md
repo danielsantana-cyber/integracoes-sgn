@@ -1,106 +1,72 @@
-# Central de Suporte SGN
+# Central Operacional de Suporte — SGN
 
-Esta central foi organizada para ajudar o suporte a decidir com mais rapidez, registrar melhor os casos e escalar com mais critério. O objetivo não é só documentar erros, mas reduzir retrabalho, evitar chamados duplicados e dar mais segurança para quem atende.
-
----
-
-## O que você deve conseguir fazer aqui
-
-Ao abrir esta base, a expectativa é simples: em poucos minutos você precisa conseguir entender o caso, validar o que já foi tentado, aplicar uma tratativa segura ou encaminhar com o contexto certo.
-
-Use esta central para responder rapidamente:
-
-- O erro já apareceu antes?
-- O suporte consegue resolver ou precisa escalar?
-- Se precisar escalar, vai para GECON, GETIC ou DevOps?
-- Quais evidências precisam seguir junto?
-- Já existe chamado aberto para esse problema?
+Esta base foi construida para apoiar o dia a dia do suporte com informacoes concretas vindas da operacao real. Cada tratativa aqui documentada foi validada com o time de desenvolvimento.
 
 ---
 
-## Comece por onde
+## Para que serve esta central
 
-| Se você precisa... | Vá para |
+Qualquer pessoa do suporte, ao consultar esta base, deve conseguir responder:
+
+- Qual e o erro ou sintoma que estou vendo?
+- Existe tratativa documentada para esse caso?
+- Consigo resolver no proprio suporte ou preciso escalar?
+- Se precisar escalar, vai para GECON, GETIC ou devs?
+- Quais evidencias preciso enviar junto?
+
+---
+
+## Onde esta cada coisa
+
+| Secao | O que voce encontra |
 |---|---|
-| Entender o fluxo antes de agir | [Fluxo de atendimento](fluxo-tratativa.md) |
-| Decidir para qual equipe encaminhar | [Direcionamento e escalonamento](direcionamento.md) |
-| Tratar erro visto no dashboard | [Erros de integração](integracoes.md) |
-| Tratar erro ligado ao ERP | [Erros do Benner](benner.md) |
-| Consultar casos práticos já resolvidos | [Erros operacionais do dia a dia](erros-operacionais.md) |
-| Ver se o problema já tem chamado | [Chamados abertos](chamados.md) |
-| Consultar padrões repetidos | [Problemas recorrentes](problemas.md) |
-| Operar o dashboard SGN | [Como usar o dashboard SGN](dashboard-sgn.md) |
+| [Primeiros acessos ao SGN](acessos.md) | Como solicitar acesso, validar permissoes e iniciar a operacao |
+| [Tratativa de chamados no SGN](fluxo-tratativa.md) | O que fazer antes de escalar qualquer caso |
+| [Integracoes](integracoes.md) | Erros tecnicos entre sistemas, APIs e sincronizacoes |
+| [Benner](benner.md) | Erros ligados ao ERP, faturamento, cadastros e documentos |
+| [Erros operacionais do dia a dia](erros-operacionais.md) | Casos reais com tratativas validadas pelo time de desenvolvimento |
+| [PIX](pix.md) | Fluxo especifico de integracao de pagamentos via PIX |
+| [Unidade nao integrada](unidade-nao-integrada.md) | Processo para resolver erro de unidade sem cadastro no Benner |
+| [Como usar o Dashboard SGN](dashboard-sgn.md) | Links, abas, rotina diaria e como navegar no dashboard |
+| [Chamados abertos](chamados.md) | Registro de chamados em andamento e status atual |
+| [Direcionamento e escalonamento](direcionamento.md) | Como decidir para qual equipe encaminhar o caso |
+| [Problemas recorrentes](problemas.md) | Padroes repetidos com historico de ocorrencias |
+| [Como registrar novos casos](contribuicao.md) | Fluxo e padrao para manter a base atualizada |
 
 ---
 
-## Atalhos para o dia a dia
+## Como usar na pratica
 
-### Recebi um erro no dashboard
-
-1. Abra o protocolo do registro.
-2. Verifique se já houve envio com sucesso.
-3. Confirme se o caso cabe em tratativa já documentada.
-4. Só depois decida entre aprovar retorno, reenviar, forçar reenvio ou escalar.
-
-A maioria dos erros operacionais acontece quando alguém tenta agir sem olhar o histórico do protocolo.
+1. Pesquise pelo erro na barra lateral ou use a busca
+2. Leia o contexto e a causa documentada
+3. Aplique a tratativa descrita
+4. Se necessario, escale com as evidencias indicadas
+5. Se o erro nao estiver documentado, registre seguindo o modelo padrao
 
 ---
 
-### Preciso escalar um caso
+## Antes de escalar qualquer caso
 
-Antes de escalar, valide quatro pontos:
-
-1. Mensagem exata do erro.
-2. Sistema e fluxo afetados.
-3. O que já foi testado pelo suporte.
-4. Se já existe chamado aberto para o mesmo comportamento.
-
-Se essas quatro informações não estiverem claras, o escalonamento tende a voltar ou perder tempo na triagem.
+Verifique se ja existe um chamado aberto para o mesmo problema em [Chamados abertos](chamados.md). Isso evita chamados duplicados e acelera a resolucao.
 
 ---
 
-### Preciso saber se já existe tratativa
+## Para novos colaboradores
 
-Se o problema apareceu no dashboard, comece por [Erros de integração](integracoes.md). Se envolve cadastro, faturamento, vínculo financeiro, retorno do ERP ou comportamento interno do Benner, vá para [Erros do Benner](benner.md). Se a dúvida for mais prática, com cara de operação do dia a dia, consulte [Erros operacionais do dia a dia](erros-operacionais.md).
-
----
-
-## Visão útil para suporte e gestão
-
-Esta base também ajuda a liderança a enxergar onde estão os maiores gargalos da operação. As páginas de [Chamados abertos](chamados.md), [Problemas recorrentes](problemas.md) e [Painel de acompanhamento](dashboard.md) servem para acompanhar reincidência, volume e dependência de outras áreas.
-
-Essa leitura é importante porque nem todo erro recorrente é resolvido pelo suporte. Alguns exigem ação estrutural da GETIC, da GECON ou do time de Integrações.
+Esta base substitui orientacoes verbais e memoria individual. Antes de perguntar para alguem da equipe, consulte aqui. Se nao encontrar o que precisa, e um sinal de que vale registrar.
 
 ---
 
-## Padrão de uso da equipe
+## Canais de acionamento rapido
 
-- Consulte esta base antes de abrir novo chamado.
-- Evite tratar no improviso quando já existe orientação validada.
-- Registre novos casos quando a equipe encontrar uma tratativa confiável.
-- Atualize chamados e referências para que a base continue útil de verdade.
-
----
-
-## Canais mais usados
-
-| Situação | Canal mais comum |
+| Situacao | Canal |
 |---|---|
-| Falha técnica, erro sistêmico, infra, Benner sem retorno | GETIC / SeSuite |
-| Configuração financeira, filial, produto, boleto, regra operacional | GECON |
-| Permissão de API, WSO2, comportamento com cara de bug | DevOps |
-| Dúvida operacional rápida sobre integração | Grupo de integrações |
-| Casos de desconto duplicado no Benner | Alexandre / grupo de integrações |
+| Erro tecnico do Benner, infra, API | Abrir chamado na GETIC via SeSuite |
+| Configuracao financeira, cadastro incompleto | E-mail para GECON |
+| Permissao de API, WSO2 | DevOps |
+| Desconto duplicado, parcela liquidada | Alexandre no grupo de integracoes |
+| Duvida tecnica de integracao | Grupo de integracoes no Hangouts |
 
 ---
 
-## Para quem está começando
-
-Se você é novo na operação, não tente decorar tudo. O melhor caminho é seguir o fluxo, consultar a tratativa documentada e registrar o que ainda não estiver claro.
-
-Uma base boa não substitui análise. Ela reduz erro, acelera decisão e dá consistência para o atendimento.
-
----
-
-*Última revisão: Abril de 2026*  
-*Base revisada para uso operacional do suporte e acompanhamento gerencial* 
+*Versao 1.3 — Squad Integracoes, Movimentacoes Financeiras*

@@ -1,26 +1,27 @@
-# Fluxo de PIX
+# PIX — Tratativas de Integracao
 
-Esta página reúne as orientações específicas do fluxo de integração PIX no SGN. Em PIX, agir fora da ordem costuma gerar retrabalho.
-
----
-
-## Regra principal
-
-A cobrança via PIX só deve seguir integração depois que o pagamento estiver cobrado e confirmado. Não antecipe integração antes dessa confirmação.
+Esta pagina reune as informacoes especificas do fluxo de integracao PIX no SGN.
 
 ---
 
-## O que olhar na aba PIX
+## Quando integrar cobranças de PIX
 
-Ao analisar erro na aba PIX:
-
-1. Confirme se o pagamento já foi efetivamente confirmado.
-2. Consulte a planilha de acompanhamento antes de agir.
-3. Siga as orientações combinadas nos grupos operacionais.
+A cobranca via PIX so deve ser integrada **depois que o PIX e cobrado e confirmado**. Nao integrar antes da confirmacao do pagamento.
 
 ---
 
-## Planilhas de acompanhamento
+## Aba PIX no dashboard
+
+A aba PIX no dashboard mostra o status das integracoes relacionadas a pagamentos via PIX. E diferente das abas principais de cobranca (Matricula, Contrato, Agrupador, RPC).
+
+Ao analisar erros na aba PIX:
+1. Verificar se o pagamento PIX ja foi confirmado
+2. Consultar a planilha de casos PIX antes de qualquer acao
+3. Seguir as orientacoes dos grupos de integracao no Hangouts
+
+---
+
+## Planilhas de acompanhamento PIX
 
 | Entidade | Link |
 |---|---|
@@ -29,27 +30,54 @@ Ao analisar erro na aba PIX:
 
 ---
 
-## Parcela já liquidada em PIX
+## Erro: parcela liquidada em PIX
 
-Se a conta entre valor da parcela, desconto e tesouraria não fechar, o desconto provavelmente entrou duas vezes no Benner. Nesse caso:
+**Mensagem:**
+```
+Parcela ja foi liquidada. Verifique o valor da movimentacao, pois o documento foi baixado integralmente e restou um saldo de XX,XX
+```
 
-1. Valide os três valores.
-2. Peça exclusão do desconto duplicado.
-3. Reprocesse a baixa tesouraria.
-4. Abra chamado para investigar a causa.
+**Como analisar:**
+- Valor da parcela original
+- Valor da baixa de desconto
+- Valor da baixa tesouraria (= valor do PIX recebido)
+
+A conta correta e: `valor parcela - desconto = valor tesouraria (PIX)`
+
+Se a conta nao fechar, provavelmente o desconto foi integrado duas vezes no Benner. O SGN enviou corretamente — o problema e do lado do Benner.
+
+**O que fazer:**
+1. Confirmar os valores
+2. Solicitar ao Alexandre (grupo de integracoes) a exclusao do desconto duplicado
+3. Reprocessar a baixa tesouraria apos a exclusao
+4. Abrir chamado na GETIC para investigar a causa raiz
 
 ---
 
-## Cobrança do txid ainda não integrada
+## Erro: cobranca vinculada ao txid nao esta integrada
 
-Se a mensagem indicar que a cobrança vinculada ao txid não está integrada, verifique primeiro se a taxa correspondente já integrou. Só depois disso reenviar faz sentido.
+**Mensagem:**
+```
+A cobranca vinculada ao txid XXXXXXXXXXXXXXXXXX nao esta integrada com o Benner.
+```
+
+**O que fazer:**
+1. Verificar a taxa de matricula na aba correspondente — ela precisa estar integrada primeiro
+2. Clicar em **Consultar** na taxa
+3. Apos confirmacao, reenviar
+
+O processo sempre e: verificar se a taxa esta integrada antes de reenviar a forma de pagamento.
 
 ---
 
-## Comunicação
+## Grupos de comunicacao
 
-Os acionamentos de PIX normalmente passam pelos grupos de PIX e Fechamento, além de e-mail. Se o suporte precisar participar, alinhe a inclusão com a responsável da operação.
+Ha dois grupos no Hangouts para acionamentos relacionados ao PIX e fechamento:
+- Grupo de PIX
+- Grupo de Fechamento
+
+Acionamentos da GECON e GETIC chegam por esses grupos e por e-mail. A Rafaela pode incluir o suporte nesses grupos se necessario.
 
 ---
 
-*Última revisão: Abril de 2026*
+*Conteudo baseado no repasse operacional — Squad Integracoes, Movimentacoes Financeiras*
