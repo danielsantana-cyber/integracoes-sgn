@@ -1,72 +1,95 @@
-# Tratativa de chamados no SGN
+# Fluxo de atendimento no SGN
 
-Esta página orienta o que fazer ao receber um chamado ou incidente. Seguir esse fluxo antes de escalar reduz erros de direcionamento e acelera a resolução.
-
----
-
-## Fluxo inicial recomendado
-
-Ao receber um chamado, siga essa ordem:
-
-1. Identifique o erro, sintoma ou comportamento relatado
-2. Entenda em qual contexto ele acontece — qual sistema, qual fluxo, qual usuário
-3. Faça a validação básica antes de qualquer ação
-4. Verifique se existe tratativa documentada nesta base
-5. Aplique a tratativa, se possível
-6. Escale apenas se o caso realmente exigir
+Esta página resume a ordem de análise recomendada para qualquer chamado, erro ou comportamento estranho. Seguir esse fluxo reduz escalonamento errado, evita retrabalho e ajuda o suporte a agir com mais segurança.
 
 ---
 
-## O que validar antes de agir
+## Ordem sugerida de análise
 
-- Empresa, usuário ou contexto afetado
-- Tela ou fluxo onde o erro acontece
-- Mensagem exata do erro
-- Se o problema é pontual ou se outros usuários também estão sendo afetados
-- Se envolve apenas o SGN ou também Integrações e Benner
-- Se já existe caso semelhante documentado nesta base
+Ao receber um caso, siga esta sequência:
 
----
-
-## O que o suporte deve tentar resolver antes de escalar
-
-- Confirmar se o fluxo que o usuário usou está correto
-- Verificar se o usuário tem o acesso necessário para aquela operação
-- Confirmar se o cadastro ou dado base está consistente
-- Comparar com tratativas já registradas na base
+1. Entenda o que o usuário está relatando.
+2. Identifique em qual sistema e em qual fluxo o problema acontece.
+3. Reúna a mensagem exata do erro, se existir.
+4. Faça a validação básica antes de agir.
+5. Consulte se já existe tratativa documentada.
+6. Tente resolver no suporte quando houver orientação confiável.
+7. Escale apenas quando fizer sentido.
 
 ---
 
-## Quando não escalar imediatamente
+## O que validar antes de qualquer ação
 
-Não escale antes de validar:
+Antes de reenviar, aprovar retorno, abrir chamado ou encaminhar para outra área, confirme:
 
-- o contexto do chamado
-- o acesso do usuário
-- a mensagem de erro
-- se existe tratativa já documentada
+- Empresa, unidade, usuário ou contexto afetado.
+- Tela ou fluxo em que o erro acontece.
+- Mensagem exata do erro.
+- Se o problema é pontual ou se há mais gente afetada.
+- Se o caso envolve apenas SGN ou também integração e Benner.
+- Se já existe registro semelhante nesta base.
 
----
-
-## O que enviar quando for necessário escalar
-
-- Número do chamado
-- Empresa, unidade ou contexto afetado
-- Tela ou funcionalidade envolvida
-- Mensagem exata do erro
-- Print ou evidência visual
-- Horário aproximado da ocorrência
-- O que já foi validado pelo suporte
+Essa validação simples evita muita tratativa errada.
 
 ---
 
-## Como este fluxo se conecta com o restante da base
+## O que o suporte deve tentar primeiro
 
-- Erro técnico entre sistemas: vá para [Integrações](integracoes.md)
-- Erro ligado ao ERP: vá para [Benner](benner.md)
-- Dúvida sobre para quem encaminhar: vá para [Direcionamento e escalonamento](direcionamento.md)
-- Verificar se já existe chamado aberto: vá para [Chamados abertos](chamados.md)
+Sempre que houver tratativa documentada e segura, o suporte deve tentar resolver antes de escalar. Isso inclui, por exemplo:
+
+- Consultar protocolos antes de reenviar.
+- Confirmar se o documento já integrou com sucesso.
+- Verificar se a pessoa já está em fila de integração.
+- Conferir se existe chamado aberto para o mesmo problema.
+- Reunir evidências completas antes do encaminhamento.
 
 ---
 
-*Última revisão: Abril 2026*
+## Quando não escalar de imediato
+
+Não escale apenas porque apareceu um erro técnico. Primeiro verifique se:
+
+- o fluxo seguido pelo usuário estava correto;
+- o acesso necessário existe;
+- a tratativa já está mapeada na base;
+- o problema pode ser resolvido com análise de protocolo ou reenvio orientado.
+
+Escalonar cedo demais costuma gerar devolução, atraso e ruído entre áreas.
+
+---
+
+## Quando escalar
+
+Escalone quando pelo menos uma destas situações acontecer:
+
+- a tratativa documentada não resolveu;
+- o suporte não tem autonomia para corrigir a causa;
+- o erro depende de configuração financeira, ajuste técnico ou análise de infraestrutura;
+- o comportamento parece incidente maior ou problema recorrente já conhecido.
+
+---
+
+## O que deve seguir junto no escalonamento
+
+Sempre envie o caso organizado. O mínimo esperado é:
+
+- número do chamado, quando houver;
+- sistema e tela envolvidos;
+- mensagem exata do erro;
+- print ou evidência visual;
+- horário aproximado da ocorrência;
+- o que já foi validado pelo suporte;
+- número de chamado anterior ou referência, se existir.
+
+---
+
+## Como este fluxo se conecta com a base
+
+- Para decidir a equipe correta, use [Direcionamento e escalonamento](direcionamento.md).
+- Para erro de dashboard e integração, use [Erros de integração](integracoes.md).
+- Para erro ligado ao ERP, use [Erros do Benner](benner.md).
+- Para verificar se já existe histórico em andamento, use [Chamados abertos](chamados.md).
+
+---
+
+*Última revisão: Abril de 2026* 

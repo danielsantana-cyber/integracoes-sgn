@@ -1,72 +1,81 @@
 # Primeiros acessos ao SGN
 
-Este guia orienta novos colaboradores sobre como acessar os sistemas, solicitar permissões e validar o início da operação.
+Esta página orienta o início da operação para quem está entrando no suporte. A ideia é garantir que a pessoa comece com acesso correto, contexto mínimo e segurança para não travar no primeiro atendimento.
 
 ---
 
-## Sistemas utilizados no suporte
+## Sistemas usados no dia a dia
 
-| Sistema | Para que serve | Quando é usado |
+| Sistema | Para que serve | Quando costuma ser usado |
 |---|---|---|
-| SGN | Operação principal do suporte | Consultas, atendimento e fluxos do dia a dia |
-| Benner | Consulta de informações financeiras | Conferência de dados financeiros e documentais |
-| Integrações | Conexão entre sistemas | Análise de erros técnicos e validação de sincronizações |
+| SGN | Operação principal do suporte | Consulta de registros, acompanhamento e tratativas do fluxo |
+| Benner | Validação de informações financeiras e documentais | Conferência de baixas, documentos, cadastro e retorno do ERP |
+| Dashboards de integração | Monitoramento dos envios e retornos | Análise de erros, reenvios e validação de protocolos |
+| SeSuite | Abertura e acompanhamento de chamados | Escalonamento para GETIC |
 
 ---
 
-## Como solicitar acesso
+## Antes de começar a atender
 
-1. Confirme com a liderança quais sistemas serão necessários para sua função
-2. Solicite a liberação pelos canais internos definidos pela equipe
-3. Aguarde confirmação de que o acesso foi configurado
-4. Valide o acesso antes de iniciar a operação
+Confirme estes pontos com a liderança ou com quem estiver apoiando sua entrada na operação:
 
-> Os links de acesso e os responsáveis pela liberação devem ser preenchidos pela equipe antes da publicação definitiva desta página.
+- Quais sistemas você realmente precisa acessar.
+- Qual perfil deve ser liberado em cada sistema.
+- Quem aprova ou solicita cada acesso.
+- Quais páginas desta base são obrigatórias na primeira semana.
 
----
-
-## Onde acessar cada sistema
-
-| Sistema | Link |
-|---|---|
-| SGN | A definir pela equipe |
-| Benner | Aplicativo interno |
+Esse alinhamento evita pedir acesso em excesso ou ficar sem permissão justamente no fluxo mais usado.
 
 ---
 
 ## Checklist de primeiro acesso
 
-Antes de iniciar a operação, valide:
+Valide tudo abaixo antes de iniciar sozinho:
 
-- Login funcionando em todos os sistemas necessários
-- Permissões compatíveis com a função
-- Acesso aos menus e telas principais
-- Capacidade de consulta no Benner
-- Leitura das principais seções desta base de conhecimento
-
----
-
-## Primeiros passos após receber os acessos
-
-1. Validar login em todos os sistemas
-2. Navegar pelas telas principais para entender o layout
-3. Ler esta base de conhecimento, especialmente as páginas de [Integrações](integracoes.md) e [Benner](benner.md)
-4. Acompanhar os primeiros atendimentos com apoio de alguém da equipe
-5. Registrar qualquer inconsistência de acesso antes de atender sozinho
+- Login funcionando nos sistemas necessários.
+- Menus principais visíveis no SGN.
+- Capacidade de consulta no Benner, quando aplicável.
+- Acesso ao dashboard de integração de faturamento.
+- Acesso ao dashboard de integração de pessoa.
+- Acesso ao SeSuite para consulta ou abertura de chamados.
+- Leitura inicial de [Fluxo de atendimento](fluxo-tratativa.md), [Erros de integração](integracoes.md) e [Erros do Benner](benner.md).
 
 ---
 
-## Problemas comuns de acesso
+## Primeiros passos recomendados
 
-**Login funciona, mas menus ou telas não aparecem**
-O perfil liberado pode estar incompleto. Validar com o responsável se o perfil correto foi configurado.
-
-**Acesso ainda não disponível após solicitação**
-Confirmar com a equipe se a liberação foi concluída e se há etapas pendentes.
-
-**Não sabe a quem solicitar o acesso**
-Seguir a orientação da liderança direta até que o fluxo esteja documentado aqui.
+1. Teste todos os logins no mesmo dia em que o acesso for liberado.
+2. Abra as principais telas e confirme se os menus aparecem corretamente.
+3. Navegue pelo dashboard SGN para se familiarizar com abas e filtros.
+4. Leia as páginas principais desta base antes de assumir um atendimento sozinho.
+5. Se algo não abrir, registre de imediato e ajuste antes de depender disso em produção.
 
 ---
 
-*Última revisão: Abril 2026*
+## Problemas de acesso mais comuns
+
+### Login funciona, mas a tela esperada não aparece
+
+Normalmente isso indica perfil incompleto ou permissão parcial. Antes de reportar como erro do sistema, confirme se o acesso liberado corresponde ao perfil certo da função.
+
+---
+
+### Acesso foi solicitado, mas ainda não está disponível
+
+Confirme se a liberação já foi concluída e se existe alguma etapa pendente fora do suporte, como aprovação interna, vínculo de usuário ou perfil ainda não aplicado.
+
+---
+
+### Não sei para quem pedir o acesso
+
+Se o fluxo ainda não estiver formalizado na equipe, siga a orientação da liderança direta e depois registre essa informação nesta base. Esse é exatamente o tipo de lacuna que vale transformar em documentação.
+
+---
+
+## Observação importante
+
+Entrar na operação sem acesso validado gera retrabalho e insegurança logo no início. Sempre teste antes de assumir fila, mesmo quando alguém disser que “já está tudo certo”.
+
+---
+
+*Última revisão: Abril de 2026* 

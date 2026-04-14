@@ -1,80 +1,94 @@
 # Direcionamento e escalonamento
 
-Esta página ajuda a decidir para qual equipe um caso deve ser encaminhado quando não puder ser resolvido no suporte.
+Esta página ajuda a decidir para qual equipe um caso deve ser encaminhado quando ele sai da alçada do suporte. O foco aqui é evitar dúvida na triagem e melhorar a qualidade do escalonamento.
 
 ---
 
 ## Antes de escalar
 
-Verifique:
+Só vale encaminhar depois de validar estes quatro pontos:
 
-1. O contexto do erro — em qual sistema e em qual fluxo aconteceu
-2. A mensagem exata de erro, se houver
-3. Se o caso já tem tratativa documentada em [Integrações](integracoes.md) ou [Benner](benner.md)
-4. Se já existe chamado aberto para o mesmo problema em [Chamados abertos](chamados.md)
+1. Em qual sistema e em qual fluxo o problema aconteceu.
+2. Qual foi a mensagem exata do erro.
+3. Se já existe tratativa documentada em [Erros de integração](integracoes.md) ou [Erros do Benner](benner.md).
+4. Se já existe chamado aberto para o mesmo comportamento em [Chamados abertos](chamados.md).
 
-Só escale depois de validar esses quatro pontos.
+Se um desses pontos estiver faltando, complete antes de seguir.
 
 ---
 
 ## Quando encaminhar para GECON
 
-Use esse direcionamento quando o caso envolver principalmente:
+Encaminhe para GECON quando o caso envolver principalmente regra de negócio, configuração financeira ou cadastro operacional que depende da área.
 
-- regra de negócio ou processo que a equipe financeira precisa validar
-- configurações no Benner que dependem da área financeira (contas, centros de custo, boletos)
-- cadastros de produto, filial ou vínculos que precisam ser completados
-- dúvida sobre como o processo deveria funcionar
+Situações mais comuns:
 
-| Tipo de problema | Contato |
+- conta financeira não configurada;
+- centro de custo inválido para a filial;
+- filial ou produto sem vínculo completo;
+- configuração de boleto automático;
+- período financeiro fechado;
+- dúvida funcional sobre como o processo deveria operar.
+
+| Tipo de caso | Contatos mais usados |
 |---|---|
 | Configurações financeiras no Benner | carolini.silveira@fiesc.com.br, marcos@fiesc.com.br |
-| Cadastros de produto e filial | otavio.l.santos@fiesc.com.br, jackson.faria@fiesc.com.br, silvana.tkaczuk@fiesc.com.br |
+| Cadastro de produto, vínculo ou filial | otavio.l.santos@fiesc.com.br, jackson.faria@fiesc.com.br, silvana.tkaczuk@fiesc.com.br |
 
 ---
 
 ## Quando encaminhar para GETIC
 
-Use esse direcionamento quando o caso envolver principalmente:
+Encaminhe para GETIC quando o caso tiver perfil técnico, sistêmico ou de infraestrutura.
 
-- falha técnica de ambiente ou infraestrutura
-- integração interrompida sem causa funcional identificada
-- erro sistêmico que afeta mais de um usuário ou operação
-- problemas no Benner que não dependem de configuração da área de negócio
+Situações mais comuns:
+
+- falha de ambiente;
+- Benner sem retorno;
+- timeout ou out of memory;
+- erro técnico recorrente sem causa funcional;
+- comportamento que afeta mais de uma aba, mais de um usuário ou mais de um processo.
+
+Sempre que houver reincidência, envie também os chamados anteriores como referência.
 
 ---
 
 ## Quando encaminhar para DevOps
 
-Use esse direcionamento quando houver:
+Encaminhe para DevOps quando o problema estiver ligado a permissão de API, WSO2 ou comportamento com forte sinal de bug técnico que não depende de configuração da área financeira.
 
-- problema de permissão em API (WSO2)
-- comportamento de sistema que parece ser bug
-- falha específica de fluxo que já foi descartada como configuração ou regra de negócio
+Situações mais comuns:
+
+- Resource forbidden em API;
+- problema de permissão ou rota no WSO2;
+- fluxo que falha mesmo com contexto correto e sem indício de erro funcional.
 
 ---
 
-## Tabela de decisão rápida
+## Decisão rápida
 
-| Situação | Direcionamento |
+| Situação | Encaminhamento |
 |---|---|
-| Configuração financeira, regra de negócio, cadastro incompleto | GECON |
+| Regra de negócio, configuração financeira, cadastro incompleto | GECON |
 | Falha técnica, infraestrutura, integração interrompida | GETIC |
-| Permissão de API, bug de sistema | DevOps |
+| API, WSO2, bug técnico específico | DevOps |
 
 ---
 
-## O que enviar junto em qualquer escalonamento
+## O que enviar em qualquer escalonamento
 
-- Número do chamado
-- Descrição objetiva do problema em no máximo duas linhas
-- Sistema afetado
-- Mensagem exata do erro
-- Print ou evidência visual
-- O que já foi validado ou tentado pelo suporte
+Monte o contexto de forma objetiva:
 
-Quanto mais organizado chegar o escalonamento, mais rápido a equipe de destino consegue atuar.
+- número do chamado;
+- resumo do problema em até duas linhas;
+- sistema afetado;
+- mensagem exata do erro;
+- print ou evidência;
+- o que o suporte já validou;
+- referência de chamado anterior, se houver.
+
+Quanto melhor o contexto chegar, menor a chance de retrabalho na área que vai receber.
 
 ---
 
-*Última revisão: Abril 2026*
+*Última revisão: Abril de 2026* 
