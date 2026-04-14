@@ -38,18 +38,6 @@ integracoes-sgn/
 └── modelo-de-registro.md    Template para novos casos
 ```
 
----
-
-## Como ativar no GitHub Pages
-
-1. Fazer upload do projeto em um repositorio no GitHub
-2. Acessar Settings > Pages
-3. Em Source, selecionar Deploy from a branch
-4. Selecionar branch main e pasta / (root)
-5. Clicar em Save
-6. Aguardar alguns minutos — o link aparece em Settings > Pages
-
----
 
 ## Como manter a base atualizada
 
