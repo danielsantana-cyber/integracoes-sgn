@@ -8,7 +8,7 @@ Atendimento
 * [Primeiros acessos ao SGN](acessos.md)
 * [Fluxo de atendimento](fluxo-tratativa.md)
 * [Direcionamento e escalonamento](direcionamento.md)
-
+  
 ---
 
 Tratativas
