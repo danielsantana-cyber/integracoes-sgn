@@ -44,7 +44,7 @@ Use esse direcionamento quando o caso envolver principalmente:
 
 ---
 
-## Quando encaminhar para DevOps
+## Quando encaminhar para os Devs
 
 Use esse direcionamento quando houver:
 
@@ -60,7 +60,7 @@ Use esse direcionamento quando houver:
 |---|---|
 | Configuração financeira, regra de negócio, cadastro incompleto | GECON |
 | Falha técnica, infraestrutura, integração interrompida | GETIC |
-| Permissão de API, bug de sistema | DevOps |
+| Permissão de API, bug de sistema | Devs |
 
 ---
 
