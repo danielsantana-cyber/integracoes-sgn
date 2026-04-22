@@ -7,7 +7,7 @@
 
 ---
 
-## 📌 Como usar este guia
+##  Como usar este guia
 
 1. Identifique rapidamente o tipo do problema
 2. Veja para qual área encaminhar
@@ -17,7 +17,7 @@
 
 ---
 
-## 🚀 Decisão rápida (em 10 segundos)
+## Decisão rápida (em 10 segundos)
 
 | Se o problema for… | Vá para |
 |---|---|
@@ -27,7 +27,7 @@
 
 ---
 
-## 📌 Visão geral de encaminhamento
+##  Visão geral de encaminhamento
 
 | Tipo de problema | Encaminhar para |
 |---|---|
@@ -37,7 +37,7 @@
 
 ---
 
-## 👥 Contatos úteis
+## Contatos úteis
 
 ### GECON
 - **carolini.silveira@fiesc.com.br**
@@ -257,7 +257,7 @@ Necessário aprofundar a análise técnica conforme o contexto da integração.
 
 ---
 
-## 📍 Exemplos práticos
+##  Exemplos práticos
 
 ### Exemplo 1 — Filial e unidade LAB 365 Florianópolis
 
@@ -291,7 +291,7 @@ Erro relacionado à validação de centro de custo.
 
 ---
 
-## ✅ Resumo rápido
+##  Resumo rápido
 
 - **Acione GECON** quando o problema envolver parametrização financeira no Benner.
 - **Acione GETIC** quando o problema for técnico, cadastral ou de inconsistência sistêmica.
