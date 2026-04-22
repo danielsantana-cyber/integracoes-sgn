@@ -69,4 +69,4 @@ Esta base substitui orientacoes verbais e memoria individual. Antes de perguntar
 
 ---
 
-*Versao 1.3 — Squad Integracoes, Movimentacoes Financeiras*
+*Versao 1.0*
