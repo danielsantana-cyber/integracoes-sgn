@@ -1,12 +1,5 @@
 # Guia rápido — Integrações financeiras (Benner)
 
-> Use esta página para identificar rapidamente para onde encaminhar um erro.
-> Para tratativas detalhadas, consulte:
-> - [Integrações](integracoes.md)
-> - [Benner](benner.md)
-
----
-
 ##  Como usar este guia
 
 1. Identifique rapidamente o tipo do problema
