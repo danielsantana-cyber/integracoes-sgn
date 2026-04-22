@@ -21,7 +21,7 @@ Acompanhamento
 
 * [Chamados abertos](chamados.md)
 * [Problemas recorrentes](problemas.md)
-* [Painel de monitoramento](dashboard.md)
+* [Painel de monitoramento](monitoramento.md)
 
 ---
 
