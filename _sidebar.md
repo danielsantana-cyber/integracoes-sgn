@@ -17,7 +17,7 @@ Erros e tratativas
 
 ---
 
-<p><strong>Acompanhamento</strong></p>
+Acompanhamento
 
 * [Chamados abertos](chamados.md)
 * [Problemas recorrentes](problemas.md)
@@ -25,19 +25,19 @@ Erros e tratativas
 
 ---
 
-<p><strong>Como usar o SGN</strong></p>
+Como usar o SGN
 
 * [Dashboard de integrações](dashboard.md)
 
 ---
 
-<p><strong>Suporte rápido</strong></p>
+Suporte rápido
 
 * [Guia rápido (FAQ)](faq.md)
 
 ---
 
-<p><strong>Manutenção da base</strong></p>
+Manutenção da base
 
 * [Como alimentar a base](contribuicao.md)
 * [Modelo de novo caso](modelo-de-registro.md)
