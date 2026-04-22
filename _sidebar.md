@@ -2,7 +2,7 @@
 
 ---
 
-<p><strong>Operacao</strong></p>
+Operacao
 
 * [Primeiros acessos ao SGN](acessos.md)
 * [Tratativa de chamados no SGN](fluxo-tratativa.md)
@@ -10,7 +10,7 @@
 
 ---
 
-<p><strong>Erros e tratativas</strong></p>
+Erros e tratativas
 
 * [Integrações](integracoes.md)
 * [Benner](benner.md)
